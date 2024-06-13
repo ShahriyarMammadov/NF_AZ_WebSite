@@ -33,7 +33,7 @@ const MemberShipPage = () => {
               sponsor (fiziki və ya hüquqi şəxs) olaraq dəstək olmaq
               istəyirsiniz. Düşünürük ki, artıq təşkilatın məqsəd, vəzifələri və
               fəaliyyətləri ilə tanışsınız. Bu səbəbdən aşağıdaki formu
-              doldurmanız rica olunur. Qeydiyyat formu doldurdaq sonra, ödəniş
+              doldurmanız rica olunur. Qeydiyyat formu doldurduqdan sonra, ödəniş
               üçün Təbiət Dostlarının əməkdaşları sizinlə əlaqə saxlayacaqlar.
             </p>
             <SponsorMemberShipForm />
