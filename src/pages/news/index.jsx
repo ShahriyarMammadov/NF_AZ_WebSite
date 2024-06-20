@@ -4,12 +4,20 @@ import axios from "axios";
 import { BASE_URL } from "../../constants";
 import { Link } from "react-router-dom";
 import SiteNavigation from "../../components/navigation";
+import { Spin } from "antd";
 
 const NewsPage = () => {
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     getNewsData();
+
+    window.scrollTo({
+      left: 0,
+      top: 0,
+      behavior: "smooth",
+    });
   }, []);
 
   const getNewsData = async () => {
@@ -17,8 +25,10 @@ const NewsPage = () => {
       const { data } = await axios.get(`${BASE_URL}news`);
 
       setData(data);
+      setLoading(false);
     } catch (error) {
       console.log(error);
+      setLoading(false);
     }
   };
 
@@ -56,31 +66,49 @@ const NewsPage = () => {
           navigationData={{
             category: "Xəbərlər",
             navigate: "home",
-            // subCategory: "",
             nav: "xəbərlər",
           }}
         />
 
-        <div className="newsCards">
-          {data?.map((e, i) => {
-            return (
-              <Link className="card" key={i} to={"/xəbərlər"}>
-                <div className="image">
-                  <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-Ljxe88K-hlvw0p77WrNLBAgkdPCNRPSkTQ&s"
-                    alt="newsImage"
-                  />
-                </div>
+        {loading ? (
+          <div
+            style={{
+              width: "100%",
+              height: "40vh",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Spin size="large" />
+          </div>
+        ) : (
+          <div className="newsCards">
+            {data?.map((e, i) => {
+              return (
+                <Link className="card" key={i} to={"/xəbərlər"}>
+                  <div className="image">
+                    <img
+                      src={`https://nfazcloudrailway.up.railway.app/uploads/${e?.imageURL}`}
+                      alt="newsImage"
+                    />
+                  </div>
 
-                <div className="newsContent">
-                  <p className="date">{monthNumberToString(e?.createdAt)}</p>
-                  <p className="title">{e?.title}</p>
-                  <p className="content">{e?.content}</p>
-                </div>
-              </Link>
-            );
-          })}
-        </div>
+                  <div className="newsContent">
+                    <p className="date">{monthNumberToString(e?.createdAt)}</p>
+                    <p className="title">{e?.title}</p>
+                    <p
+                      className="content"
+                      dangerouslySetInnerHTML={{
+                        __html: e?.content?.slice(0, 150),
+                      }}
+                    ></p>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        )}
       </div>
     </div>
   );

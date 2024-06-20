@@ -1,6 +1,22 @@
 #homePage {
   overflow: hidden;
 
+  #newsSection {
+    .head {
+      text-align: center;
+
+      h1 {
+        font-weight: 400;
+        font-size: 52px;
+        color: #24a64a;
+        line-height: 62px;
+        max-width: 1000px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+      }
+    }
+  }
+
   #section1 {
     width: 100%;
 
@@ -145,7 +161,7 @@
       height: 100%;
 
       h1 {
-        font-size:  60px;
+        font-size: 60px;
         line-height: 97.5px;
         color: white;
       }
@@ -253,16 +269,16 @@
     @media only screen and (max-width: 530px) {
       .container {
         h1 {
-          font-size: 40px ;
+          font-size: 40px;
         }
 
-        p{
+        p {
           &.description {
             max-width: 850px;
             margin: 0 auto;
             color: #010507;
             line-height: 20px;
-          
+
           }
         }
 
@@ -291,19 +307,19 @@
           color: white;
           margin-bottom: 20px;
         }
-  
+
         p {
           font-weight: 400;
           font-size: 14px;
           color: #000000;
           // line-height: 22px;
-  
+
           &.description {
             max-width: 850px;
             margin: 0 auto;
             color: #010507;
             line-height: 20px;
-          
+
           }
         }
 

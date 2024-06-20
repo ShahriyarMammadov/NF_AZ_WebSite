@@ -75,7 +75,7 @@ const Header = () => {
               <Link to={"/üzvlük"} onClick={() => setOpen(false)}>
                 Haqqımızda
               </Link>
-              <Link to={"/üzvlük"} onClick={() => setOpen(false)}>
+              <Link to={"/fəaliyyətlər"} onClick={() => setOpen(false)}>
                 Fəaliyyətlər
               </Link>
               <Link to={"/xəbərlər"} onClick={() => setOpen(false)}>
@@ -110,7 +110,7 @@ const Header = () => {
               <Link to={"/üzvlük"} onClick={() => setOpen(false)}>
                 Haqqımızda
               </Link>
-              <Link to={"/üzvlük"} onClick={() => setOpen(false)}>
+              <Link to={"/fəaliyyətlər"} onClick={() => setOpen(false)}>
                 Fəaliyyətlər
               </Link>
               <Link to={"/xəbərlər"} onClick={() => setOpen(false)}>

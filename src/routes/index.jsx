@@ -21,7 +21,7 @@ const ROUTES = [
         element: <AboutPage />,
       },
       {
-        path: "projects",
+        path: "fəaliyyətlər",
         element: <ProjectsPage />,
       },
       {

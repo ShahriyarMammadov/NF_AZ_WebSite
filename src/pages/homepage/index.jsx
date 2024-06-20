@@ -2,15 +2,7 @@ import React, { useEffect, useRef } from "react";
 import "./index.scss";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaLinkedinIn,
-  FaBullhorn,
-  FaBezierCurve,
-  FaBrush,
-  FaGlobe,
-} from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import { BsInstagram } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { MdEventAvailable } from "react-icons/md";
@@ -21,7 +13,7 @@ import useScrollTriggeredCountUp from "../../components/ScrollTriggetCountUp";
 import ImageGalleryComponent from "../../components/imageGallery";
 import ContactUS from "../../components/contactUS";
 import CarouselComponent from "../../components/carousel";
-// import CarouselComponent from "../../components/carousel";
+import LatestFourNews from "../../components/latestFourNews";
 
 const HomePage = () => {
   useEffect(() => {
@@ -163,7 +155,7 @@ const HomePage = () => {
                 <p className="text">
                   Yerli və beynəlxalq qeyri formal seminarlar, təlimlər,
                   konfranslar və fərqli formatda açıq-havada maarifləndirici
-                  tədbirlər 
+                  tədbirlər
                 </p>
               </div>
             </div>
@@ -219,6 +211,16 @@ const HomePage = () => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section id="newsSection">
+        <div className="container">
+          <div className="head">
+            <h1>Xəbərlər</h1>
+          </div>
+
+          <LatestFourNews />
         </div>
       </section>
 
