@@ -46,11 +46,16 @@ const LatestFourNews = () => {
       const day = date.getDate();
       const month = date.getMonth();
       const year = date.getFullYear();
-      return `${day} ${months[month]} ${year}`;
+      return `${day - 1} ${months[month]} ${year}`;
     } catch (error) {
       console.log(error);
       return dateString;
     }
+  };
+
+  const stripHtml = (html) => {
+    const doc = new DOMParser().parseFromString(html, "text/html");
+    return doc.body.textContent || "";
   };
 
   return (
@@ -70,8 +75,12 @@ const LatestFourNews = () => {
       ) : (
         <div className="newsCards">
           {latestNews?.map((e, i) => {
+            const plainText = stripHtml(e?.content);
+            const shortText =
+              plainText.slice(0, 100) + (plainText.length > 100 ? "..." : "");
+
             return (
-              <Link className="card" key={i} to={"/xəbərlər"}>
+              <Link className="card" key={i} to={`/xəbərlər/${e?._id}`}>
                 <div className="image">
                   <img
                     src={`https://nfazcloudrailway.up.railway.app/uploads/${e?.imageURL}`}
@@ -82,12 +91,7 @@ const LatestFourNews = () => {
                 <div className="newsContent">
                   <p className="date">{monthNumberToString(e?.createdAt)}</p>
                   <p className="title">{e?.title}</p>
-                  <p
-                    className="content"
-                    dangerouslySetInnerHTML={{
-                      __html: e?.content?.slice(0, 150),
-                    }}
-                  ></p>
+                  <p className="content">{shortText}</p>
                 </div>
               </Link>
             );
