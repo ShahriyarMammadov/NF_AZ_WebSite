@@ -6,6 +6,7 @@ import StructurePage from "../pages/structure";
 import MemberShipPage from "../pages/memberShip";
 import SponsorMemberShipForm from "../components/memberShip/sponsorMemberShipForm";
 import NewsPage from "../pages/news";
+import NewsDetailPage from "../pages/news/detail";
 
 const ROUTES = [
   {
@@ -39,6 +40,10 @@ const ROUTES = [
       {
         path: "xəbərlər",
         element: <NewsPage />,
+      },
+      {
+        path: "xəbərlər/:id",
+        element: <NewsDetailPage />,
       },
     ],
   },
