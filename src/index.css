@@ -7,16 +7,12 @@
   font-family: "Poppins", sans-serif;
   text-decoration: none;
 }
- 
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
 }
 
-
 .ant-spin-dot-item {
-  background-color: white !important;
+  background-color: #23a74a !important;
 }
-
-

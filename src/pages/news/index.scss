@@ -1,8 +1,8 @@
 #newsPage {
-    padding: 80px 0 150px 0;
+    padding: 70px 0 150px 0;
 
-    .ant-spin-dot-item {
-        background-color: #23a74a !important;
+    @media only screen and (max-width: 1210px) {
+        padding: 70px 10px 150px 10px;
     }
 
     .container {
@@ -27,6 +27,8 @@
                         height: 100%;
                         object-fit: cover;
                         transition: all 0.5s;
+                        border-top-left-radius: 10px;
+                        border-top-right-radius: 10px;
                     }
                 }
 
@@ -58,6 +60,36 @@
                     .content {
                         font-size: 14px;
                         color: black;
+                    }
+                }
+            }
+
+            @media only screen and (max-width: 1100px) {
+                .card {
+                    width: calc((100% / 3) - 15px);
+                }
+            }
+
+            @media only screen and (max-width: 810px) {
+                justify-content: center;
+
+                .card {
+                    width: calc((100% / 2) - 15px);
+
+                    .image {
+                        height: 360px;
+                    }
+                }
+            }
+
+            @media only screen and (max-width: 644px) {
+                gap: 30px;
+
+                .card {
+                    width: 100%;
+
+                    .image {
+                        height: 350px;
                     }
                 }
             }
