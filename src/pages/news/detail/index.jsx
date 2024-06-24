@@ -15,6 +15,12 @@ const NewsDetailPage = () => {
 
   useEffect(() => {
     getNewsByID();
+
+    window.scrollTo({
+      left: 0,
+      top: 0,
+      behavior: "smooth",
+    });
   }, []);
 
   const getNewsByID = async () => {
