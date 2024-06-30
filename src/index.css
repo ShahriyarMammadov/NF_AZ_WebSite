@@ -16,3 +16,23 @@
 .ant-spin-dot-item {
   background-color: #23a74a !important;
 }
+
+
+
+.swiper-pagination {
+  position: absolute;
+  bottom: 15px !important;
+}
+
+  .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+    margin-left: 5px !important;
+    background: #fff !important;
+  }
+
+  .swiper-navigation-bullet {
+    background: #fff !important;
+    --swiper-navigation-size: 30px !important;
+  }
+

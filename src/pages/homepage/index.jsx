@@ -14,6 +14,23 @@ import ImageGalleryComponent from "../../components/imageGallery";
 import ContactUS from "../../components/contactUS";
 import CarouselComponent from "../../components/carousel";
 import LatestFourNews from "../../components/latestFourNews";
+import { FaCheck } from "react-icons/fa";
+import TD1 from "../../assets/photoCarousel/TD1.jpg";
+import TD2 from "../../assets/photoCarousel/TD2.jpg";
+import TD3 from "../../assets/photoCarousel/TD3.jpg";
+import TD4 from "../../assets/photoCarousel/TD4.jpg";
+import TD5 from "../../assets/photoCarousel/TD5.jpg";
+import TD6 from "../../assets/photoCarousel/TD6.jpg";
+import TD7 from "../../assets/photoCarousel/TD7.jpg";
+import TD8 from "../../assets/photoCarousel/TD8.jpg";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/effect-cards";
+import "swiper/css/pagination";
+
+import { EffectCards, Pagination, Autoplay } from "swiper/modules";
 
 const HomePage = () => {
   useEffect(() => {
@@ -86,24 +103,105 @@ const HomePage = () => {
         <div className="overlay"> </div>
 
         <div className="container">
-          <h1 data-aos="fade-up">Biz Təbiət Dostlarıyıq</h1>
+          <div className="content">
+            <div className="leftSide" data-aos="fade-right">
+              <h1>Biz Təbiət Dostlarıyıq</h1>
 
-          <p className="description" data-aos="fade-up">
-            Azərbaycanda 2008-ci ildə "Yaşıl Velosipedçilər Klubu" kimi tanınan
-            Təbiət Dostları artıq Gənclər Təşkilatı kimi fəaliyyətini davam
-            edir. Təşkilat Qafqazda xüsusi ilə də Azərbaycanda ətraf mühitin
-            mühafizəsini təşviqi, sağlam həyat tərzinin təbliği, açıq-havada
-            təlim və tədrisin inkişafı məqsədi ilə yerli və beynəlxalq layihələr
-            icra edir. “Təbiət Dostları - Azərbaycan”, “Beynəlxalq Gənclər
-            Təbiət Dostları” (International Young Nature Friends) təşkilatının
-            tamhüquqlu üzvü olaraq, hər il müxtəlif beynəlxalq proqramların
-            iştirakçısı və təşkilatçısı kimi fəaliyyət göstərir. 120 ildən
-            çoxdur ki, Beynəlxalq Təbiət Dostları qrupları dünyanın müxtəlif
-            şəhərlərində mütəmadi olaraq maarifləndirici layihələr və turistik
-            gəzintilər həyata keçirir. Azərbaycanda Təbiət Dostları Evlərinin
-            başlanması biraz zaman alsada dünyanın əksər bölgəsində minlərlə
-            Təbiət Dostları Evləri fəaliyyət göstərir.
-          </p>
+              <p className="description">
+                Azərbaycanda 2008-ci ildə "Yaşıl Velosipedçilər Klubu" kimi
+                tanınan Təbiət Dostları artıq Gənclər Təşkilatı kimi
+                fəaliyyətini davam edir. Təşkilat Qafqazda xüsusi ilə də
+                Azərbaycanda ətraf mühitin mühafizəsini təşviqi, sağlam həyat
+                tərzinin təbliği, açıq-havada təlim və tədrisin inkişafı məqsədi
+                ilə yerli və beynəlxalq layihələr icra edir. “Təbiət Dostları -
+                Azərbaycan”, “Beynəlxalq Gənclər Təbiət Dostları” (International
+                Young Nature Friends) təşkilatının tamhüquqlu üzvü olaraq, hər
+                il müxtəlif beynəlxalq proqramların iştirakçısı və təşkilatçısı
+                kimi fəaliyyət göstərir. 120 ildən çoxdur ki, Beynəlxalq Təbiət
+                Dostları qrupları dünyanın müxtəlif şəhərlərində mütəmadi olaraq
+                maarifləndirici layihələr və turistik gəzintilər həyata keçirir.
+                Azərbaycanda Təbiət Dostları Evlərinin başlanması biraz zaman
+                alsada dünyanın əksər bölgəsində minlərlə Təbiət Dostları Evləri
+                fəaliyyət göstərir.
+              </p>
+
+              <button>
+                <a href="">DAHA ÇOX MƏLUMAT ƏLDƏ EDİN</a>
+              </button>
+            </div>
+
+            <div className="rightSide" data-aos="fade-left">
+              <div className="events">
+                <h1>Daimi </h1>
+                <h1>Layihələr</h1>
+                <div className="text">
+                  <span>
+                    <i>
+                      <FaCheck />{" "}
+                    </i>
+                  </span>
+                  <p>VELOSİPEDÇİNİN SƏHƏRİ</p>
+                </div>
+                <div className="text">
+                  <span>
+                    <i>
+                      <FaCheck />{" "}
+                    </i>
+                  </span>
+                   <p> GREEN DRINKS</p>
+                </div>
+                <div className="text">
+                  <span>
+                    <i>
+                      <FaCheck />{" "}
+                    </i>
+                  </span>
+                  <p> EKO TURLAR </p>
+                </div>
+
+                <button>
+                <a href="">BİZƏ QOŞUL</a>
+              </button>
+              </div>
+
+              <div className="carousel">
+                <Swiper
+                  effect={"cards"}
+                  grabCursor={true}
+                  pagination={{ clickable: true }}
+                  autoplay={{ delay: 2000, disableOnInteraction: false }}
+                  modules={[EffectCards, Pagination, Autoplay]}
+                  className="mySwiper"
+                >
+                  <SwiperSlide>
+                    <img src={TD1} alt="" />
+                  </SwiperSlide>
+
+                  <SwiperSlide>
+                    <img src={TD2} alt="" />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img src={TD3} alt="" />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img src={TD4} alt="" />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img src={TD5} alt="" />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img src={TD6} alt="" />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img src={TD7} alt="" />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img src={TD8} alt="" />
+                  </SwiperSlide>
+                </Swiper>
+              </div>
+            </div>
+          </div>
 
           <div className="counts" data-aos="fade-up">
             <div className="count">

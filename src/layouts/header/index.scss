@@ -28,6 +28,9 @@ header {
 
                 a {
                     color: black;
+                    &:hover{
+                        color: #24a64a;
+                    }
                 }
             }
         }
