@@ -2,13 +2,15 @@ import React from "react";
 import { Carousel } from "antd";
 import "./index.scss";
 import { Link } from "react-router-dom";
+import Cover1 from "../../assets/cover/cover1.jpg"
 import Cover2 from "../../assets/cover/cover2.jpg"
+import Cover3 from "../../assets/cover/cover3.jpg"
 
 const CarouselComponent = ({ data }) => {
   const staticData = [
     {
       coverImage:
-        "https://scontent-fra5-1.xx.fbcdn.net/v/t31.18172-8/19237856_1574117375945771_3981505136596282702_o.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_ohc=3xrQcj0p1dwQ7kNvgEFoElM&_nc_ht=scontent-fra5-1.xx&oh=00_AYA-A7H7slMlSKEhbGjb9o56RWR19ozRs_EtsjcVJIskMw&oe=6672EC0A",
+      Cover1,
       text: "Təbiət Dostları dünyanın yüzlərlə ölkəsində ətraf mühitin mühafizəsində töhvə vermək məqsədi ilə fəaliyyətdədir.",
       headText: "TƏBİƏT DOSTLARINA XOŞ GƏLMİSİNİZ",
     },
@@ -20,7 +22,7 @@ const CarouselComponent = ({ data }) => {
     },
     {
       coverImage:
-        "https://scontent-fra3-1.xx.fbcdn.net/v/t39.30808-6/279267575_4986466628073121_7786928783407424108_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=vT-XxXmdwlcQ7kNvgG0dugE&_nc_ht=scontent-fra3-1.xx&oh=00_AYDFIH_FkAeVq-WFaa_rvX_dnKoUJZVTiaPpzBpABgfXqA&oe=665136AF",
+      Cover3,
       text: "Ətraf mühitə qarşı daha da məsuliyyətli olmağa və bölgədə davamlı turizmin inkişafı isiqamətində açıq hava tədbirlərinin təşkili.",
       headText: "EKOTURİZM VƏ REKREASİYA",
     },
