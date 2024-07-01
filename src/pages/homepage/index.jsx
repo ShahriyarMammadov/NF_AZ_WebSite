@@ -132,7 +132,7 @@ const HomePage = () => {
 
             <div className="rightSide" data-aos="fade-left">
               <div className="events">
-                <h1>Uzunmuddetli </h1>
+                <h1>Uzunmüddətli </h1>
                 <h1>Layihələr</h1>
                 <div className="text">
                   <span>
