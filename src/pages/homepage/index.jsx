@@ -127,7 +127,7 @@ const HomePage = () => {
               </p>
 
               <button>
-                <Link to={'/haqqımızda'}>DAHA ÇOX MƏLUMAT ƏLDƏ EDİN</Link>
+                <Link to={"/haqqımızda"}>DAHA ÇOX MƏLUMAT ƏLDƏ EDİN</Link>
               </button>
             </div>
 
@@ -161,7 +161,7 @@ const HomePage = () => {
                 </div>
 
                 <button>
-                  <Link to={'/üzvlük'}>BİZƏ QOŞUL</Link>
+                  <Link to={"/üzvlük"}>BİZƏ QOŞUL</Link>
                 </button>
               </div>
 
@@ -205,27 +205,31 @@ const HomePage = () => {
           </div>
 
           <div className="counts" data-aos="fade-up">
-            <div className="count">
-              <h2 ref={ref}>{count1}</h2>
-              <h4>Üzvlər</h4>
-            </div>
-            <hr />
+            <div className="left">
+              <div className="count">
+                <h2 ref={ref}>{count1}</h2>
+                <h4>Üzvlər</h4>
+              </div>
+              <hr />
 
-            <div className="count">
-              <h2 ref={ref}>{count2}</h2>
-              <h4>Ekoloji layihələr və proqramlar</h4>
+              <div className="count">
+                <h2 ref={ref}>{count2}</h2>
+                <h4>Ekoloji layihələr və proqramlar</h4>
+              </div>
             </div>
-            <hr />
+            <hr className="hiddenHR"/>
 
-            <div className="count">
-              <h2 ref={ref}>{count3}</h2>
-              <h4>EkoTuristik səfərlər və turlar</h4>
-            </div>
-            <hr />
+            <div className="right">
+              <div className="count">
+                <h2 ref={ref}>{count3}</h2>
+                <h4>EkoTuristik səfərlər və turlar</h4>
+              </div>
+              <hr />
 
-            <div className="count">
-              <h2 ref={ref}>{count4}</h2>
-              <h4>Beynəlxalq Təbiət Dostları Üzvləri</h4>
+              <div className="count">
+                <h2 ref={ref}>{count4}</h2>
+                <h4>Beynəlxalq Təbiət Dostları Üzvləri</h4>
+              </div>
             </div>
           </div>
         </div>
