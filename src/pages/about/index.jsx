@@ -9,19 +9,6 @@ const AboutPage = () => {
 
   return (
     <div id="aboutPage">
-      {/* <div className="backgroundImage">
-        <div className="backImageContainer">
-          <div className="text">
-            <h2>About US</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
-              possimus corrupti nemo rerum veritatis accusamus provident quos
-              autem qui et quo sunt sapiente est, itaque minus optio animi
-              aperiam, quas atque ab magnam. Aut ut magnam blanditiis.
-            </p>
-          </div>
-        </div>
-      </div> */}
       <div className="logo">
         <img src={TDlogo} alt="" />
       </div>
@@ -83,19 +70,20 @@ const AboutPage = () => {
 
         <div className="text">
           <p>
-          •maarifləndirici seminarlar, dəyirmi masalar, konfranslar və s. təşkili
+            •maarifləndirici seminarlar, dəyirmi masalar, konfranslar və s.
+            təşkili
             <br />
-            •ekoloji tədiqat layihələlərin təşkili           
+            •ekoloji tədiqat layihələlərin təşkili
             <br />
             •velosipedin nəqliyyat vasitəsi kimi təbliğinin təşkili
-          <br />
-          •ekoloji məlumatların araşdırılması və yayılmasının təşkili
-          <br />
-          •ekoloji qiymətləndirmə və monitorinqlərin aparılması
-          <br />
-          •ekoturistik tədbirlərin təşkili
-          <br />
-          •ekofototurların təşkili
+            <br />
+            •ekoloji məlumatların araşdırılması və yayılmasının təşkili
+            <br />
+            •ekoloji qiymətləndirmə və monitorinqlərin aparılması
+            <br />
+            •ekoturistik tədbirlərin təşkili
+            <br />
+            •ekofototurların təşkili
           </p>
         </div>
       </div>

@@ -4,7 +4,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import { BsInstagram } from "react-icons/bs";
-import { Link } from "react-router-dom";
 import { MdEventAvailable } from "react-icons/md";
 import { MdDirectionsBike } from "react-icons/md";
 import { FaHiking } from "react-icons/fa";
@@ -23,6 +22,7 @@ import TD5 from "../../assets/photoCarousel/TD5.jpg";
 import TD6 from "../../assets/photoCarousel/TD6.jpg";
 import TD7 from "../../assets/photoCarousel/TD7.jpg";
 import TD8 from "../../assets/photoCarousel/TD8.jpg";
+import ProjectsComponent from "../../components/projects";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -160,8 +160,8 @@ const HomePage = () => {
                 </div>
 
                 <button>
-                <a href="">BİZƏ QOŞUL</a>
-              </button>
+                  <a href="">BİZƏ QOŞUL</a>
+                </button>
               </div>
 
               <div className="carousel">
@@ -319,6 +319,16 @@ const HomePage = () => {
           </div>
 
           <LatestFourNews />
+        </div>
+      </section>
+
+      <section id="projectsSection">
+        <div className="container">
+          <div className="head">
+            <h1>Layihələr</h1>
+          </div>
+
+          <ProjectsComponent />
         </div>
       </section>
 

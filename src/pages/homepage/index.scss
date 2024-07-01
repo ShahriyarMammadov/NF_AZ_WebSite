@@ -1,7 +1,8 @@
 #homePage {
   overflow: hidden;
 
-  #newsSection {
+  #newsSection,
+  #projectsSection {
     .head {
       text-align: center;
 
@@ -14,6 +15,21 @@
         margin: 0 auto;
         margin-bottom: 40px;
       }
+    }
+  }
+
+  #projectsSection {
+    margin: 0 15px 150px 15px;
+    background-color: #231c1c;
+    padding-bottom: 60px;
+
+    .head {
+      padding-top: 30px;
+    }
+
+    @media only screen and (max-width: 1100px) {
+      margin: 0;
+      padding: 0 15px;
     }
   }
 
@@ -160,6 +176,7 @@
 
         .leftSide {
           width: 40%;
+
           h1 {
             color: #24a64a;
           }
@@ -172,6 +189,7 @@
           button {
             margin-top: 30px;
             border: none;
+
             a {
               background-color: #24a64a;
               padding: 10px 40px;
@@ -192,16 +210,19 @@
           width: 60%;
           display: flex;
           justify-content: space-around;
+
           .events {
             h1 {
               color: #24a64a;
             }
+
             .text {
               margin-top: 20px;
               font-size: 15px;
               margin-top: 30px;
               display: flex;
               align-items: center;
+
               span {
                 background-color: #24a64a;
                 width: 35px;
@@ -210,11 +231,13 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+
                 i {
                   font-size: 12px;
                   color: #fff;
                 }
               }
+
               p {
                 color: #444444;
                 font-weight: 700;
@@ -226,6 +249,7 @@
             button {
               margin-top: 60px;
               border: none;
+
               a {
                 background-color: #24a64a;
                 padding: 10px 40px;
@@ -245,6 +269,7 @@
           .swiper {
             width: 280px;
             height: 400px;
+
             .swiper-slide {
               box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
                 rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
@@ -265,6 +290,7 @@
           }
         }
       }
+
       .counts {
         display: flex;
         justify-content: center;
@@ -565,10 +591,8 @@
   }
 
   #section5 {
-    background-image: linear-gradient(
-        rgba(21, 21, 21, 0.6),
-        rgba(21, 21, 21, 0.6)
-      ),
+    background-image: linear-gradient(rgba(21, 21, 21, 0.6),
+        rgba(21, 21, 21, 0.6)),
       url("../../assets/contact-bg.jpg");
     width: 100%;
     background-position: center;
