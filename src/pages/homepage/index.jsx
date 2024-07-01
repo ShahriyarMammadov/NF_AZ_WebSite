@@ -31,6 +31,7 @@ import "swiper/css/effect-cards";
 import "swiper/css/pagination";
 
 import { EffectCards, Pagination, Autoplay } from "swiper/modules";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   useEffect(() => {
@@ -126,7 +127,7 @@ const HomePage = () => {
               </p>
 
               <button>
-                <a href="">DAHA ÇOX MƏLUMAT ƏLDƏ EDİN</a>
+                <Link to={'/haqqımızda'}>DAHA ÇOX MƏLUMAT ƏLDƏ EDİN</Link>
               </button>
             </div>
 
@@ -160,7 +161,7 @@ const HomePage = () => {
                 </div>
 
                 <button>
-                  <a href="">BİZƏ QOŞUL</a>
+                  <Link to={'/üzvlük'}>BİZƏ QOŞUL</Link>
                 </button>
               </div>
 
