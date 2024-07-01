@@ -186,6 +186,8 @@
           button {
             margin-top: 30px;
             border: none;
+            background: none;
+            text-decoration: none;
 
             a {
               background-color: #24a64a;
@@ -193,11 +195,14 @@
               border-radius: 50px;
               margin-top: 50px;
               color: #fff;
+              transition: all 0.5s;
 
               &:hover {
                 background-color: #fff;
                 color: #24a64a;
-                border: 2px solid #24a64a;
+                border: 1px solid #24a64a;
+               
+               
               }
             }
           }
@@ -246,6 +251,7 @@
             button {
               margin-top: 60px;
               border: none;
+              background: none;
 
               a {
                 background-color: #24a64a;
@@ -253,11 +259,12 @@
                 border-radius: 50px;
                 margin-top: 50px;
                 color: #fff;
+                transition: all 0.2s;
 
                 &:hover {
                   background-color: #fff;
                   color: #24a64a;
-                  border: 2px solid #24a64a;
+                  border: 1px solid #24a64a;
                 }
               }
             }

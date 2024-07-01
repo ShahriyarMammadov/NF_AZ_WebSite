@@ -91,15 +91,20 @@
     }
 
     .linkToNewsPage {
-        margin: 20px 0 50px 0;
-
+        margin: 35px 0 50px 0;
         a {
-            color: blue;
-            transition: all 0.5s;
+            background-color: #24a64a;
+            padding: 10px 40px;
+            border-radius: 50px;
+            margin-top: 100px;
+            color: #fff;
+            transition: all 0.2s;
 
             &:hover {
-                color: rgb(2, 2, 146);
+              background-color: #fff;
+              color: #24a64a;
+              border: 1px solid #24a64a;
             }
-        }
+          }
     }
 }
