@@ -52,7 +52,7 @@ const ProjectsComponent = () => {
           data?.slice(0, 3)?.map((e, i) => {
             const plainText = stripHtml(e?.content);
             const shortText =
-              plainText.slice(0, 100) + (plainText.length > 100 ? "..." : "");
+              plainText.slice(0, 300) + (plainText.length > 259 ? "..." : "");
 
             return (
               <div
@@ -69,7 +69,7 @@ const ProjectsComponent = () => {
                 <div className="content">
                   <div className="title">
                     <h2>
-                      {e?.title?.slice(0, 24)} {e?.title?.length > 24 && "...."}
+                      {e?.title?.slice(0, 40)} {e?.title?.length > 40 && "...."}
                     </h2>
                   </div>
 

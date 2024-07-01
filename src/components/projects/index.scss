@@ -44,9 +44,17 @@
             .content {
                 padding: 15px 20px 30px 20px;
 
+                .title{
+                    margin-top: 30px;
+                }
+
                 .context {
                     margin-bottom: 25px;
-                    min-height: 70px;
+                    height: 230px;
+                    p{
+                        font-size: 15px;
+                        margin-top: 20px;
+                    }
                 }
 
                 a {

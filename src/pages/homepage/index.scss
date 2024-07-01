@@ -4,28 +4,26 @@
   #newsSection,
   #projectsSection {
     .head {
-      text-align: center;
+      // text-align: center;
+      padding-top: 50px;
 
       h1 {
         font-weight: 400;
-        font-size: 52px;
-        color: #24a64a;
+        font-size: 44px;
+        // color: #24a64a;
         line-height: 62px;
         max-width: 1000px;
         margin: 0 auto;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
       }
     }
   }
 
   #projectsSection {
-    margin: 0 15px 150px 15px;
-    background-color: #231c1c;
-    padding-bottom: 60px;
+  
+    margin: 0px 15px 280px 15px;
+    padding-bottom: 50px;
 
-    .head {
-      padding-top: 30px;
-    }
 
     @media only screen and (max-width: 1100px) {
       margin: 0;
@@ -624,7 +622,6 @@
         h1 {
           font-weight: 400;
           font-size: 52px;
-          color: #000000;
           line-height: 62px;
           max-width: 1000px;
           margin: 0 auto;

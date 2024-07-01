@@ -328,7 +328,6 @@ const HomePage = () => {
           <div className="head">
             <h1>Layihələr</h1>
           </div>
-
           <ProjectsComponent />
         </div>
       </section>
