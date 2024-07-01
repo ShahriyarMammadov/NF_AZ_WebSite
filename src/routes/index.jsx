@@ -18,7 +18,7 @@ const ROUTES = [
         element: <HomePage />,
       },
       {
-        path: "about",
+        path: "haqqımızda",
         element: <AboutPage />,
       },
       {

@@ -72,7 +72,7 @@ const Header = () => {
 
           <div className="right">
             <nav>
-              <Link to={"/üzvlük"} onClick={() => setOpen(false)}>
+              <Link to={"/haqqımızda"} onClick={() => setOpen(false)}>
                 Haqqımızda
               </Link>
               <Link to={"/fəaliyyətlər"} onClick={() => setOpen(false)}>
