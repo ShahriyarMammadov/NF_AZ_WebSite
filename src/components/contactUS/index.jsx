@@ -58,18 +58,30 @@ const ContactUS = () => {
       </div>
 
       <div className="right">
-        <h3>KONTAkT INFO</h3>
+        <h3>ƏLAQƏ MƏLUMATLARI</h3>
 
-        <p className="colored">Bizi Hardan Tapa Bilərsən</p>
-        <p>Sosial Şəbəkələrdən və ya zənglə</p>
+        <div className="emailAndPhone">
+          <div>
+            <p className="colored">Bizi Hardan Tapa Bilərsən</p>
+            <p>Sosial Şəbəkələrdən və ya zənglə</p>
+          </div>
 
-        <p className="colored">Bizə email göndər</p>
-        <div className="email">
-          <a href="info@naturefriendsazerbaijan.org"> info@naturefriendsazerbaijan.org</a>
-          <a href="naturefriendsazerbaijanv@gmail.com">naturefriendsazerbaijanv@gmail.com</a>
+          <div>
+            <p className="colored">Bizə email göndər</p>
+
+            <div className="email">
+              <a href="info@naturefriendsazerbaijan.org">
+                {" "}
+                info@naturefriendsazerbaijan.org
+              </a>
+              <a href="naturefriendsazerbaijanv@gmail.com">
+                naturefriendsazerbaijanv@gmail.com
+              </a>
+            </div>
+          </div>
         </div>
 
-        <p className="colored">Zəng et və ya yaz </p>
+        <p className="colored">Zəng et və ya yaz</p>
         <div className="phone">
           <a href="tel:+994515984130">Phone: (+994) 51 598 4130</a>
           <a href="tel:+994515984130">Whatsapp: (+994) 51 598 4130</a>

@@ -47,7 +47,6 @@ const Gallery = () => {
           <a
             href={Photo3}
             className="grid-content"
-            // data-aos="fade-up-left"
           >
             <img src={Photo3} />
             <div className="overlay">

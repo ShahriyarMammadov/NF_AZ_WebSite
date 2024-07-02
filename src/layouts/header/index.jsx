@@ -116,9 +116,6 @@ const Header = () => {
               <Link to={"/xəbərlər"} onClick={() => setOpen(false)}>
                 Xəbərlər
               </Link>
-              <Link to={"/haqqımızda"} onClick={() => setOpen(false)}>
-                Haqqımızda
-              </Link>
               <Link to={"/üzvlük"} onClick={() => setOpen(false)}>
                 Əlaqə
               </Link>
