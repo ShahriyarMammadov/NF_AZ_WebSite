@@ -5,6 +5,7 @@ import { BASE_URL } from "../../constants";
 import { Link } from "react-router-dom";
 import SiteNavigation from "../../components/navigation";
 import { Spin } from "antd";
+import { Helmet } from "react-helmet";
 
 const NewsPage = () => {
   const [data, setData] = useState([]);
@@ -66,6 +67,16 @@ const NewsPage = () => {
 
   return (
     <div id="newsPage">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Təbiət Dostları Azərbaycan | Xəbərlər</title>
+        <link
+          rel="shortcut icon"
+          href="../../assets/td logo 1.png"
+          type="image/x-icon"
+        />
+      </Helmet>
+
       <div className="container">
         <SiteNavigation
           navigationData={{

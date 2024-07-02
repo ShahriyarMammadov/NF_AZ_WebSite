@@ -23,15 +23,14 @@ import TD6 from "../../assets/photoCarousel/TD6.jpg";
 import TD7 from "../../assets/photoCarousel/TD7.jpg";
 import TD8 from "../../assets/photoCarousel/TD8.jpg";
 import ProjectsComponent from "../../components/projects";
-
+import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
+// swiper
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import "swiper/css";
 import "swiper/css/effect-cards";
 import "swiper/css/pagination";
-
 import { EffectCards, Pagination, Autoplay } from "swiper/modules";
-import { Link } from "react-router-dom";
 
 const HomePage = () => {
   useEffect(() => {
@@ -58,6 +57,16 @@ const HomePage = () => {
 
   return (
     <div id="homePage">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Təbiət Dostları Azərbaycan</title>
+        <link
+          rel="shortcut icon"
+          href="../../assets/td logo 1.png"
+          type="image/x-icon"
+        />
+      </Helmet>
+
       <section id="section1">
         <CarouselComponent />
 
@@ -217,7 +226,7 @@ const HomePage = () => {
                 <h4>Ekoloji layihələr və proqramlar</h4>
               </div>
             </div>
-            <hr className="hiddenHR"/>
+            <hr className="hiddenHR" />
 
             <div className="right">
               <div className="count">

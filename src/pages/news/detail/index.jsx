@@ -6,6 +6,7 @@ import { useState } from "react";
 import "./index.scss";
 import SiteNavigation from "../../../components/navigation";
 import { Image, Spin } from "antd";
+import { Helmet } from "react-helmet";
 
 const NewsDetailPage = () => {
   const { id } = useParams();
@@ -37,6 +38,16 @@ const NewsDetailPage = () => {
 
   return (
     <div id="newsDataByID">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{data?.title}</title>
+        <link
+          rel="shortcut icon"
+          href="../../assets/td logo 1.png"
+          type="image/x-icon"
+        />
+      </Helmet>
+
       <div className="container">
         <SiteNavigation
           navigationData={{

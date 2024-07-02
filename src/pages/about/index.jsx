@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "./index.scss";
 import TDlogo from "../../assets/td logo 1.png";
+import { Helmet } from "react-helmet";
 
 const AboutPage = () => {
   useEffect(() => {
@@ -9,6 +10,16 @@ const AboutPage = () => {
 
   return (
     <div id="aboutPage">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Təbiət Dostları Azərbaycan | Haqqımızda</title>
+        <link
+          rel="shortcut icon"
+          href="../../assets/td logo 1.png"
+          type="image/x-icon"
+        />
+      </Helmet>
+
       <div className="logo">
         <img src={TDlogo} alt="" />
       </div>

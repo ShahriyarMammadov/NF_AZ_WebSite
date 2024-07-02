@@ -3,6 +3,7 @@ import "./index.scss";
 import MemberShipAboutPage from "../../components/memberShip/memberShipAboutText";
 import MemberShipForm from "../../components/memberShip/memberShipForm";
 import SponsorMemberShipForm from "../../components/memberShip/sponsorMemberShipForm";
+import { Helmet } from "react-helmet";
 
 const MemberShipPage = () => {
   const [reading, setReading] = useState();
@@ -14,6 +15,16 @@ const MemberShipPage = () => {
 
   return (
     <div id="memberShip">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Təbiət Dostları Azərbaycan | Üzvlük  qeydiyyat forması</title>
+        <link
+          rel="shortcut icon"
+          href="../../assets/td logo 1.png"
+          type="image/x-icon"
+        />
+      </Helmet>
+
       <div className="container">
         <div className="headText">
           <h1>Təbiət Dostları - Üzvlük qeydiyyat forması</h1>
