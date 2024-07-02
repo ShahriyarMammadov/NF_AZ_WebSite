@@ -1,7 +1,7 @@
 header {
     display: flex;
     justify-content: space-between;
-    z-index: 3;
+    z-index: 30;
     position: fixed;
     width: 100%;
 
@@ -28,7 +28,8 @@ header {
 
                 a {
                     color: black;
-                    &:hover{
+
+                    &:hover {
                         color: #24a64a;
                     }
                 }
@@ -53,7 +54,7 @@ header {
         }
     }
 
-    @media only screen and (max-width: 790px) {
+    @media only screen and (max-width: 880px) {
 
         .right {
             display: none;

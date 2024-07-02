@@ -20,10 +20,11 @@ const AboutPage = () => {
         />
       </Helmet>
 
-      <div className="logo">
-        <img src={TDlogo} alt="" />
-      </div>
       <div className="container">
+        <div className="logo">
+          <img src={TDlogo} alt="" />
+        </div>
+
         <div className="header">
           <div>
             <h1>Təbiət Dostları</h1>

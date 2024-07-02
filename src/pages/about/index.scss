@@ -1,75 +1,110 @@
 #aboutPage {
-    padding: 150px 0 150px 0;
-  
+    padding: 150px 0;
 
     @media only screen and (max-width: 1210px) {
-        padding: 70px 10px 150px 10px;
+        padding: 90px 10px 70px 10px;
     }
-    .backgroundImage {
-        width: 100%;
-        height: 300px;
-        background-image: linear-gradient(rgba(21, 21, 21, 0.6), rgba(21, 21, 21, 0.6)), url('../../assets/about_backimage.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
 
-        .backImageContainer {
-            max-width: 1200px;
-            margin: 0 auto;
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            text-align: center;
+            width: 250px;
+        }
+    }
+
+    .container {
+        .header {
+            margin-top: 50px;
+            text-align: center;
+
+            h1 {
+                letter-spacing: 14px;
+                color: black;
+            }
+        }
+
+        .text {
+            p {
+                margin-top: 30px;
+            }
+        }
+
+        .line {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+
+            div {
+                border: 1px solid #444444;
+                width: 40%;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 900px) {
+        .container {
+            .logo {
+
+                img {
+                    width: 250px;
+                }
+            }
+
+            .header {
+                h1 {
+                    font-size: 26px;
+                }
+
+                span {
+                    font-size: 14px;
+                }
+            }
 
             .text {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                color: white;
-                margin: 0 auto;
-                height: 300px;
-
                 p {
-                    width: 50%;
-                    margin-top: 20px;
+                    font-size: 14px;
                 }
             }
         }
     }
 
-    .logo{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        img{
-            text-align: center;
-            width: 250px;
-    }
-    }
-    .container {
-        width: 75%;
-        .header{
-            margin-top: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            h1{
-                letter-spacing: 14px;
-                color: black;
-            }
-              
-        }
-        .text{
-            p{
-                margin-top: 30px;
+    @media only screen and (max-width: 600px) {
+        .container {
+            .logo {
+
+                img {
+                    width: 230px;
+                }
             }
 
-        }
-        .line{
-            margin-top: 30px;
-            display: flex;
-            justify-content: center;
-            div{
-                border: 1px solid  #444444;
-                width: 40%;
+            .header {
+                margin-top: 35px;
+
+                h1 {
+                    font-size: 22px;
+                    letter-spacing: 5px;
+                }
+            }
+
+            .text {
+                p {
+                    font-size: 13px;
+                }
             }
         }
+    }
 
-        margin: 40px auto;
+    @media only screen and (max-width: 375px) {
+        .container {
+            .logo {
+                img {
+                    width: 210px;
+                }
+            }
+        }
     }
 }
