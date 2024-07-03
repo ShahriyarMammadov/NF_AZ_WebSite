@@ -5,14 +5,20 @@
   #projectsSection {
     .head {
       // text-align: center;
-      padding-top: 50px;
+      padding: 50px 0 0 0;
+
+      @media only screen and (max-width: 1200px) {
+        padding: 50px 15px 0 15px;
+      }
+
+      @media only screen and (max-width: 650px) {
+        padding: 0 15px;
+      }
 
       h1 {
         font-weight: 400;
         font-size: 44px;
         // color: #24a64a;
-        line-height: 62px;
-        max-width: 1000px;
         margin: 0 auto;
         margin-bottom: 20px;
       }
@@ -20,14 +26,20 @@
   }
 
   #projectsSection {
-
-    margin: 0px 15px 280px 15px;
+    margin: 0px 15px;
     padding-bottom: 50px;
 
+    .head {
+      padding: 50px 0 0 0;
 
-    @media only screen and (max-width: 1100px) {
-      margin: 0;
-      padding: 0 15px;
+      @media only screen and (max-width: 1200px) {
+        padding: 50px 0 0 0;
+      }
+
+      @media only screen and (max-width: 1100px) {
+        margin: 0;
+        padding: 0;
+      }
     }
   }
 

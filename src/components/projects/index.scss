@@ -1,5 +1,4 @@
 #projectsComponent {
-    margin-bottom: -150px;
 
     @media only screen and (max-width: 1100px) {
         margin-bottom: 0px;
@@ -44,14 +43,14 @@
             .content {
                 padding: 15px 20px 30px 20px;
 
-                .title{
+                .title {
                     margin-top: 30px;
                 }
 
                 .context {
-                    margin-bottom: 25px;
-                    height: 230px;
-                    p{
+                    margin-bottom: 50px;
+
+                    p {
                         font-size: 15px;
                         margin-top: 20px;
                     }

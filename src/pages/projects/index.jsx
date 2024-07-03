@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./index.scss";
 import { Helmet } from "react-helmet";
+import ProjectsComponent from "../../components/projects";
+import SiteNavigation from "../../components/navigation";
 
 const ProjectsPage = () => {
+  useEffect(() => {
+    window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
+  }, []);
+
   return (
     <div id="projects">
       <Helmet>
@@ -15,10 +21,16 @@ const ProjectsPage = () => {
         />
       </Helmet>
 
-      <div className="backgroundImage"></div>
-
       <div className="container">
-        <h1>Projects</h1>
+        <SiteNavigation
+          navigationData={{
+            category: "Layihələr",
+            navigate: "home",
+            nav: "fəaliyyətlər",
+          }}
+        />
+
+        <ProjectsComponent sliceCount={60} />
       </div>
     </div>
   );

@@ -1,4 +1,8 @@
 #latestNews {
+    @media only screen and (max-width: 1200px){
+        padding: 0 15px;
+    }
+
     .ant-spin-dot-item {
         background-color: #23a74a !important;
     }
@@ -92,6 +96,7 @@
 
     .linkToNewsPage {
         margin: 35px 0 50px 0;
+
         a {
             background-color: #24a64a;
             padding: 10px 40px;
@@ -101,10 +106,10 @@
             transition: all 0.2s;
 
             &:hover {
-              background-color: #fff;
-              color: #24a64a;
-              border: 1px solid #24a64a;
+                background-color: #fff;
+                color: #24a64a;
+                border: 1px solid #24a64a;
             }
-          }
+        }
     }
 }

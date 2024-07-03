@@ -6,8 +6,9 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import { BASE_URL } from "../../constants/index";
 import { Spin } from "antd";
 
-const ProjectsComponent = () => {
+const ProjectsComponent = ({ sliceCount }) => {
   const [data, setData] = useState([]);
+  const [sliceCountState, setSliceCountState] = useState(sliceCount || 3);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -43,13 +44,12 @@ const ProjectsComponent = () => {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              backgroundColor: "#231c1c",
             }}
           >
             <Spin size="large" />
           </div>
         ) : (
-          data?.slice(0, 3)?.map((e, i) => {
+          data?.slice(0, sliceCountState)?.map((e, i) => {
             const plainText = stripHtml(e?.content);
             const shortText =
               plainText.slice(0, 300) + (plainText.length > 259 ? "..." : "");
