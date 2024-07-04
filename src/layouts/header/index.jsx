@@ -5,6 +5,7 @@ import { FaFacebookF } from "react-icons/fa";
 import { BsInstagram } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
+import { IoMdArrowDropdown } from "react-icons/io";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./index.scss";
@@ -13,6 +14,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
   // const [colorChange, setColorChange] = useState(false);
   const [open, setOpen] = useState(false);
+  const [subMenu, setSubMenu] = useState(0);
   const drawerRef = useRef(null);
 
   const scrollThreshold = 150;
@@ -72,12 +74,37 @@ const Header = () => {
 
           <div className="right">
             <nav>
-              <Link to={"/haqqımızda"} onClick={() => setOpen(false)}>
-                Haqqımızda
-              </Link>
-              <Link to={"/fəaliyyətlər"} onClick={() => setOpen(false)}>
-                Fəaliyyətlər
-              </Link>
+              <div>
+                <Link to={"/haqqımızda"} onClick={() => setOpen(false)}>
+                  Haqqımızda
+                  <IoMdArrowDropdown />
+                </Link>
+
+                <div className="subMenu">
+                  <Link to={"/haqqımızda"} onClick={() => setOpen(false)}>
+                    Struktur
+                  </Link>
+                  <Link to={"/haqqımızda"} onClick={() => setOpen(false)}>
+                    Üzvlər
+                  </Link>
+                </div>
+              </div>
+
+              <div>
+                <Link to={"/fəaliyyətlər"} onClick={() => setOpen(false)}>
+                  Fəaliyyətlər
+                  <IoMdArrowDropdown />
+                </Link>
+
+                <div className="subMenu">
+                  <Link to={"/fəaliyyətlər"} onClick={() => setOpen(false)}>
+                    Layihələr
+                  </Link>
+                  <Link to={"/fəaliyyətlər"} onClick={() => setOpen(false)}>
+                    Görüşlər
+                  </Link>
+                </div>
+              </div>
               <Link to={"/xəbərlər"} onClick={() => setOpen(false)}>
                 Xəbərlər
               </Link>
@@ -107,12 +134,58 @@ const Header = () => {
             </div>
 
             <nav>
-              <Link to={"/haqqımızda"} onClick={() => setOpen(false)}>
-                Haqqımızda
+              <div
+                onClick={() => {
+                  setSubMenu(subMenu === 1 ? 0 : 1);
+                }}
+              >
+                <Link to={"#"}>
+                  Haqqımızda
+                  <IoMdArrowDropdown />
+                </Link>
+                {subMenu === 1 && (
+                  <div className="subMenu">
+                    <Link to={"/haqqımızda"} onClick={() => setOpen(false)}>
+                      Struktur
+                    </Link>
+                    <Link to={"/haqqımızda"} onClick={() => setOpen(false)}>
+                      Haqqımızda
+                    </Link>
+                    <Link to={"/haqqımızda"} onClick={() => setOpen(false)}>
+                      Üzvlər
+                    </Link>
+                  </div>
+                )}
+              </div>
+
+              <Link to={"/üzvlük"} onClick={() => setOpen(false)}>
+                Üzvlük
               </Link>
-              <Link to={"/fəaliyyətlər"} onClick={() => setOpen(false)}>
-                Fəaliyyətlər
-              </Link>
+
+              <div
+                onClick={() => {
+                  setSubMenu(subMenu === 2 ? 0 : 2);
+                }}
+              >
+                <Link to={"#"}>
+                  Fəaliyyətlər
+                  <IoMdArrowDropdown />
+                </Link>
+                {subMenu === 2 && (
+                  <div className="subMenu">
+                    <Link to={"/fəaliyyətlər"} onClick={() => setOpen(false)}>
+                      Layihələr
+                    </Link>
+                    <Link to={"/fəaliyyətlər"} onClick={() => setOpen(false)}>
+                      Fəaliyyətlər
+                    </Link>
+                    <Link to={"/fəaliyyətlər"} onClick={() => setOpen(false)}>
+                      Görüşlər
+                    </Link>
+                  </div>
+                )}
+              </div>
+
               <Link to={"/xəbərlər"} onClick={() => setOpen(false)}>
                 Xəbərlər
               </Link>
