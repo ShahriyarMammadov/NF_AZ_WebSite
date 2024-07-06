@@ -105,7 +105,7 @@ const MemberShipAboutPage = ({ setReading }) => {
         qeydiyyat formuna keçid edə bilərlər.
         <br />
         <br />
-        <b>!!! TƏLƏSİN - SON GÜN 30 İYUN !!!</b>
+        {/* <b>!!! TƏLƏSİN - SON GÜN 30 İYUN !!!</b>
         <br /> <br />
         30 iyun tarixinə kimi üzv olan şəxslər <ins>30% </ins> endirim əldə
         etmiş olacaqlar.
@@ -115,7 +115,7 @@ const MemberShipAboutPage = ({ setReading }) => {
         <br />
         Ailəvi üzvlük <del>70₼</del> <ins>49₼</ins>
         <br />
-        Partnyor üzv <del>90₼</del> <ins>63₼</ins>
+        Partnyor üzv <del>90₼</del> <ins>63₼</ins> */}
       </p>
       <br />
       <p>
