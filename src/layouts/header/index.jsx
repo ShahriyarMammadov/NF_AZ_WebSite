@@ -112,10 +112,10 @@ const Header = () => {
                 Üzvlük
               </Link>
 
-              {/* <Link to={"/blog"} onClick={() => setOpen(false)}>
+              <Link to={"/blog"} onClick={() => setOpen(false)}>
                 Blog
-              </Link> */}
-              
+              </Link>
+
               <Link to={"/üzvlük"} onClick={() => setOpen(false)}>
                 Əlaqə
               </Link>
@@ -194,6 +194,11 @@ const Header = () => {
               <Link to={"/xəbərlər"} onClick={() => setOpen(false)}>
                 Xəbərlər
               </Link>
+
+              <Link to={"/blog"} onClick={() => setOpen(false)}>
+                Blog
+              </Link>
+
               <Link to={"/üzvlük"} onClick={() => setOpen(false)}>
                 Əlaqə
               </Link>

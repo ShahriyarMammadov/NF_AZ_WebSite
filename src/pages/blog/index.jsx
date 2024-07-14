@@ -70,16 +70,19 @@ const BlogPage = () => {
           ) : (
             blogData?.map((e, i) => {
               return (
-                <div
+                <a
+                  href={`https://nfazcloudrailway.up.railway.app/uploads/${e?.fileURL}`}
+                  target="_blank"
                   key={i}
                   className="card"
                   style={{ backgroundColor: e?.background_color }}
                 >
                   <div className="image">
-                    <img src={`${e?.imageURL}`} alt={e?.title} />
+                    <img
+                      src={`https://nfazcloudrailway.up.railway.app/uploads/${e?.imageURL}`}
+                      alt={e?.title}
+                    />
                   </div>
-
-                  {/* https://nfazcloudrailway.up.railway.app/uploads/ */}
 
                   <div className="content">
                     <div className="title">
@@ -89,14 +92,16 @@ const BlogPage = () => {
                     </div>
 
                     <div className="context">
-                      <p>{e?.cardContent}</p>
+                      <p
+                        dangerouslySetInnerHTML={{ __html: e?.cardContent }}
+                      ></p>
                     </div>
 
                     <Link to={"/"}>
                       Daha ətraflı <MdKeyboardArrowRight className="icon" />
                     </Link>
                   </div>
-                </div>
+                </a>
               );
             })
           )}
