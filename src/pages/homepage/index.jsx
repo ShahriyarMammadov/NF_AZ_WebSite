@@ -1,10 +1,10 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./index.scss";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import { BsInstagram } from "react-icons/bs";
-import { MdEventAvailable } from "react-icons/md";
+import { MdEventAvailable, MdKeyboardArrowRight } from "react-icons/md";
 import { MdDirectionsBike } from "react-icons/md";
 import { FaHiking } from "react-icons/fa";
 import { GiEcology } from "react-icons/gi";
@@ -31,6 +31,9 @@ import "swiper/css";
 import "swiper/css/effect-cards";
 import "swiper/css/pagination";
 import { EffectCards, Pagination, Autoplay } from "swiper/modules";
+import axios from "axios";
+import { BASE_URL } from "../../constants";
+import { Spin } from "antd";
 
 const HomePage = () => {
   useEffect(() => {
@@ -48,6 +51,25 @@ const HomePage = () => {
       });
     };
   }, []);
+
+  const [blogData, setBlogData] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    getBlogData();
+  }, []);
+
+  const getBlogData = async () => {
+    try {
+      const { data } = await axios.get(`${BASE_URL}blog`);
+
+      setBlogData(data);
+      setLoading(false);
+    } catch (error) {
+      console.log(error);
+      setLoading(false);
+    }
+  };
 
   const ref = useRef();
   const count1 = useScrollTriggeredCountUp(ref, 100);
@@ -341,9 +363,64 @@ const HomePage = () => {
           <div className="head">
             <h1>Layihələr</h1>
           </div>
+
           <ProjectsComponent />
         </div>
       </section>
+{/* 
+      <section id="blogSection">
+        <div className="container">
+          <div className="head">
+            <h1>Blog</h1>
+          </div>
+
+          <div className="projectsCards">
+            {loading ? (
+              <div
+                style={{
+                  width: "100%",
+                  height: "50vh",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Spin size="large" />
+              </div>
+            ) : (
+              blogData?.slice(0, 4)?.map((e, i) => {
+                return (
+                  <div
+                    key={i}
+                    className="card"
+                    style={{ backgroundColor: e?.background_color }}
+                  >
+                    <div className="image">
+                      <img src={`${e?.imageURL}`} alt={e?.title} />
+                    </div>
+
+                    <div className="content">
+                      <div className="title">
+                        <h2>
+                          {e?.title} {e?.title?.length > 40 && "...."}
+                        </h2>
+                      </div>
+
+                      <div className="context">
+                        <p>{e?.cardContent}</p>
+                      </div>
+
+                      <Link to={"/"}>
+                        Daha ətraflı <MdKeyboardArrowRight className="icon" />
+                      </Link>
+                    </div>
+                  </div>
+                );
+              })
+            )}
+          </div>
+        </div>
+      </section> */}
 
       <section id="section4">
         <div className="head" data-aos="fade-up">

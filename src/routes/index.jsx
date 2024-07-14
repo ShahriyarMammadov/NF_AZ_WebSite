@@ -7,6 +7,7 @@ import MemberShipPage from "../pages/memberShip";
 import SponsorMemberShipForm from "../components/memberShip/sponsorMemberShipForm";
 import NewsPage from "../pages/news";
 import NewsDetailPage from "../pages/news/detail";
+import BlogPage from "../pages/blog";
 
 const ROUTES = [
   {
@@ -28,6 +29,10 @@ const ROUTES = [
       {
         path: "structure",
         element: <StructurePage />,
+      },
+      {
+        path: "blog",
+        element: <BlogPage />,
       },
       {
         path: "üzvlük",
