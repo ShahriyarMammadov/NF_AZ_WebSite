@@ -367,14 +367,14 @@ const HomePage = () => {
           <ProjectsComponent />
         </div>
       </section>
-{/* 
+
       <section id="blogSection">
         <div className="container">
           <div className="head">
             <h1>Blog</h1>
           </div>
 
-          <div className="projectsCards">
+          <div className="blogCards">
             {loading ? (
               <div
                 style={{
@@ -390,13 +390,17 @@ const HomePage = () => {
             ) : (
               blogData?.slice(0, 4)?.map((e, i) => {
                 return (
-                  <div
+                  <a
                     key={i}
                     className="card"
-                    style={{ backgroundColor: e?.background_color }}
+                    href={`https://nfazcloudrailway.up.railway.app/uploads/${e?.fileURL}`}
+                    target="_blank"
                   >
                     <div className="image">
-                      <img src={`${e?.imageURL}`} alt={e?.title} />
+                      <img
+                        src={`https://nfazcloudrailway.up.railway.app/uploads/${e?.imageURL}`}
+                        alt={e?.title}
+                      />
                     </div>
 
                     <div className="content">
@@ -407,20 +411,22 @@ const HomePage = () => {
                       </div>
 
                       <div className="context">
-                        <p>{e?.cardContent}</p>
+                        <p
+                          dangerouslySetInnerHTML={{ __html: e?.cardContent }}
+                        ></p>
                       </div>
 
                       <Link to={"/"}>
                         Daha ətraflı <MdKeyboardArrowRight className="icon" />
                       </Link>
                     </div>
-                  </div>
+                  </a>
                 );
               })
             )}
           </div>
         </div>
-      </section> */}
+      </section>
 
       <section id="section4">
         <div className="head" data-aos="fade-up">

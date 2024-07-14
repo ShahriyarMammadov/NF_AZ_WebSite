@@ -46,6 +46,7 @@
 
   #blogSection {
     padding-bottom: 50px;
+    // background-color: red;
 
     .container {
 
@@ -62,7 +63,7 @@
         }
       }
 
-      .projectsCards {
+      .blogCards {
         display: flex;
         gap: 20px;
         flex-wrap: wrap;
@@ -73,14 +74,10 @@
           transition: all 0.5s;
           color: black;
           cursor: pointer;
+          border-radius: 10px;
+          border: 1px solid rgb(212, 210, 210);
 
           &:hover {
-            // .image {
-            //     img {
-            //         transform: scale(1.1);
-            //     }
-            // }
-
             transform: translateY(-10px);
 
             box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
@@ -97,6 +94,8 @@
               height: 100%;
               object-fit: cover;
               transition: all 0.5s;
+              border-top-left-radius: 10px;
+              border-top-right-radius: 10px;
             }
           }
 

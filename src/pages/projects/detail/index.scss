@@ -1,0 +1,53 @@
+#projectsDetail {
+    padding: 70px 0 150px 0;
+
+    padding: 70px 0 100px 0;
+
+    @media only screen and (max-width: 1210px) {
+        padding: 70px 10px 100px 10px;
+    }
+
+    .newsContent {
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 40px;
+        }
+
+        .newsCoverImage {
+            width: 500px;
+        }
+
+        @media only screen and (max-width: 800px) {
+            h2 {
+                font-size: 20px;
+            }
+        }
+
+        @media only screen and (max-width: 550px) {
+            h2 {
+                font-size: 18px;
+            }
+
+            .newsCoverImage {
+                width: 400px;
+            }
+        }
+
+        @media only screen and (max-width: 425px) {
+            h2 {
+                font-size: 16px;
+            }
+
+            p {
+                font-size: 14px !important;
+            }
+
+            .newsCoverImage {
+                width: 300px;
+            }
+        }
+    }
+}

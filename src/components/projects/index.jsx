@@ -77,7 +77,7 @@ const ProjectsComponent = ({ sliceCount }) => {
                     <p>{shortText}</p>
                   </div>
 
-                  <Link to={"/"}>
+                  <Link to={`/fəaliyyətlər/${e?._id}`}>
                     Daha ətraflı <MdKeyboardArrowRight className="icon" />
                   </Link>
                 </div>
