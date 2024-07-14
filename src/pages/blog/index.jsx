@@ -97,9 +97,10 @@ const BlogPage = () => {
                       ></p>
                     </div>
 
-                    <Link to={"/"}>
-                      Daha ətraflı <MdKeyboardArrowRight className="icon" />
-                    </Link>
+                   <h4>
+                    <MdKeyboardArrowRight className="icon" />   Daha ətraflı
+                   </h4> 
+                   
                   </div>
                 </a>
               );

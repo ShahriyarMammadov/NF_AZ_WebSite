@@ -46,10 +46,8 @@
 
   #blogSection {
     padding-bottom: 50px;
-    // background-color: red;
 
     .container {
-
       .head {
         padding: 50px 0 0 0;
 
@@ -72,7 +70,6 @@
         .card {
           width: calc((100% / 4) - 15px);
           transition: all 0.5s;
-          color: black;
           cursor: pointer;
           border-radius: 10px;
           border: 1px solid rgb(212, 210, 210);
@@ -101,6 +98,8 @@
 
           .content {
             padding: 15px 20px 30px 20px;
+            color: white;
+            background-color: #007476;
 
             .title {
               margin-top: 30px;
@@ -115,9 +114,7 @@
               }
             }
 
-            a {
-              color: white;
-              background-color: rgb(157, 38, 38);
+            h4 {
               display: flex;
               align-items: center;
               gap: 5px;
