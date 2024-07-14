@@ -41,7 +41,10 @@
                 color: white;
 
                 .title {
-                    margin-top: 30px;
+                    margin-top: 20px;
+                    h2{
+                        font-size: 18px
+                      }
                 }
 
                 .context {
@@ -58,8 +61,6 @@
                     align-items: center;
                     gap: 5px;
                     width: fit-content;
-                    padding: 6px 15px;
-                    border-radius: 5px;
                     font-size: 14px;
 
                     .icon {
