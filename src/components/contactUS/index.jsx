@@ -6,18 +6,66 @@ import {
   FaLinkedinIn,
   FaSquareXTwitter,
 } from "react-icons/fa6";
+import axios from "axios";
+import { Button, message, Space } from "antd";
+import { BASE_URL } from "../../constants";
 
 const ContactUS = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [messageText, setMessageText] = useState("");
+  const [subject, setSubject] = useState("");
 
-  const handleSubmit = (e) => {
+  const [messageApi, contextHolder] = message.useMessage();
+
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
+    try {
+      if (
+        name.length < 5 ||
+        email.length < 5 ||
+        messageText.length < 5 ||
+        subject.length < 3
+      ) {
+        return messageApi.warning({
+          type: "warning",
+          content: "Məlumatları tam daxil edin!",
+        });
+      }
+      setLoading(true);
+
+      const { data } = await axios.post(`${BASE_URL}contactUS`, {
+        fullName: name,
+        email: email,
+        subject: subject,
+        message: messageText,
+      });
+
+      console.log(data);
+      setLoading(false);
+
+      messageApi.open({
+        type: "success",
+        content:
+          "Müraciətiniz uğurla yaradıldı, ən qısa zamanda geri dönüş edəcik ❤",
+      });
+    } catch (error) {
+      console.log(error?.response);
+      setLoading(false);
+
+      messageApi.open({
+        type: "error",
+        content: "Xəta baş verdi",
+      });
+    }
   };
 
   return (
     <div id="contactUs" data-aos="fade-up">
+      {contextHolder}
       <div className="left">
         <h3>BİZƏ MESAJ GÖNDƏRİN</h3>
 
@@ -39,20 +87,22 @@ const ContactUS = () => {
 
             <input
               type="text"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              value={subject}
+              onChange={(e) => setSubject(e.target.value)}
               placeholder="Mövzu"
             />
 
             <textarea
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
+              value={messageText}
+              onChange={(e) => setMessageText(e.target.value)}
               cols="30"
               rows="10"
               placeholder="Mesajın"
             ></textarea>
 
-            <button type="submit">Göndər</button>
+            <button type="submit" disabled={loading}>
+              {loading ? "Göndərilir" : "Göndər"}
+            </button>
           </fieldset>
         </form>
       </div>
@@ -71,11 +121,10 @@ const ContactUS = () => {
 
             <div className="email">
               <a href="info@naturefriendsazerbaijan.org">
-                {" "}
                 info@naturefriendsazerbaijan.org
               </a>
-              <a href="naturefriendsazerbaijanv@gmail.com">
-                naturefriendsazerbaijanv@gmail.com
+              <a href="naturefriendsazerbaijan@gmail.com">
+                naturefriendsazerbaijan@gmail.com
               </a>
             </div>
           </div>
