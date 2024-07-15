@@ -46,13 +46,15 @@
 
   #blogSection {
     padding-bottom: 50px;
+<<<<<<< HEAD
 
     @media only screen and (max-width: 1210px) {
       padding: 0 15px 150px 15px;
     }
+=======
+>>>>>>> d77ef4a2743ed9137125f906c09d34e4e5d42472
 
     .container {
-
       .head {
         padding: 50px 0 0 0;
 
@@ -75,7 +77,6 @@
         .card {
           width: calc((100% / 4) - 15px);
           transition: all 0.5s;
-          color: black;
           cursor: pointer;
           border-radius: 10px;
           border: 1px solid rgb(212, 210, 210);
@@ -89,7 +90,7 @@
 
           .image {
             width: 100%;
-            height: 260px;
+            height: 230px;
             overflow: hidden;
 
             img {
@@ -104,30 +105,32 @@
 
           .content {
             padding: 15px 20px 30px 20px;
+            color: white;
+            background-color: #007476;
 
             .title {
-              margin-top: 30px;
+              margin-top: 20px;
+              h2{
+                font-size: 18px
+              }
             }
 
             .context {
-              margin-bottom: 50px;
+              margin-bottom: 40px;
 
               p {
-                font-size: 15px;
+                font-size: 14px;
                 margin-top: 20px;
               }
             }
 
-            a {
-              color: white;
-              background-color: rgb(157, 38, 38);
+            h4 {
               display: flex;
               align-items: center;
               gap: 5px;
               width: fit-content;
-              padding: 6px 15px;
               border-radius: 5px;
-              font-size: 14px;
+              font-size: 13px;
 
               .icon {
                 font-size: 22px;
