@@ -30,8 +30,8 @@ const MemberShipPage = () => {
           <h1>Təbiət Dostları - Üzvlük qeydiyyat forması</h1>
           <h4>
             Ətraflı məlumat üçün suallarınızı{" "}
-            <a href="mailto:membership@naturefriendsazerbaijan.org">
-              membership@naturefriendsazerbaijan.org
+            <a href="mailto:info@naturefriendsazerbaijan.org">
+              info@naturefriendsazerbaijan.org
             </a>{" "}
             ünvanına göndərə bilərsiniz
           </h4>

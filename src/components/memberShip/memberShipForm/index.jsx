@@ -189,8 +189,8 @@ const MemberShipForm = () => {
                     Təbiət Dostları
                   </span>
                   , Üzvlərlə İş Komitəsi <br />
-                  <a href="mailto:membership@naturefriendsazerbaijan.org">
-                    membership@naturefriendsazerbaijan.org
+                  <a href="mailto:info@naturefriendsazerbaijan.org">
+                    info@naturefriendsazerbaijan.org
                   </a>
                 </p>
               </div>
