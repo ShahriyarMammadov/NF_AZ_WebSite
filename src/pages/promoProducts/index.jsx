@@ -60,9 +60,13 @@ const PromoProducts = () => {
             <Spin size="large" />
           </div>
         ) : (
-          <Link className="products-grid" to={"/promo-products"}>
+          <div className="products-grid">
             {promoProducts?.map((product) => (
-              <div className="product-card" key={product?._id}>
+              <Link
+                className="product-card"
+                key={product?._id}
+                to={`/promo-products/${product?._id}`}
+              >
                 <img
                   src={`https://nfazcloudrailway.up.railway.app/uploads/${product?.cover_image}`}
                   alt={product?.name}
@@ -73,12 +77,16 @@ const PromoProducts = () => {
                   {/* <p className="product-category">
                     {product?.category?.join(", ")}
                   </p> */}
-                  <p className="product-category">Stokda {product?.available} ədəd var</p>
-                  <span className="product-price">Qiymət: {product?.price} AZN</span>
+                  <p className="product-category">
+                    Stokda {product?.available} ədəd var
+                  </p>
+                  <span className="product-price">
+                    Qiymət: {product?.price} AZN
+                  </span>
                 </div>
-              </div>
+              </Link>
             ))}
-          </Link>
+          </div>
         )}
       </div>
     </div>

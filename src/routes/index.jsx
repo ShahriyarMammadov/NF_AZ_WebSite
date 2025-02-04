@@ -10,6 +10,7 @@ import NewsDetailPage from "../pages/news/detail";
 import BlogPage from "../pages/blog";
 import ProjectDetail from "../pages/projects/detail";
 import PromoProducts from "../pages/promoProducts";
+import PromoProductsDetailPage from "../pages/promoProducts/detail";
 
 const ROUTES = [
   {
@@ -59,6 +60,10 @@ const ROUTES = [
       {
         path: "promo-products",
         element: <PromoProducts />,
+      },
+      {
+        path: "promo-products/:id",
+        element: <PromoProductsDetailPage />,
       },
     ],
   },
