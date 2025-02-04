@@ -12,27 +12,11 @@ import "./index.scss";
 import { Link } from "react-router-dom";
 
 const Header = () => {
-  // const [colorChange, setColorChange] = useState(false);
   const [open, setOpen] = useState(false);
   const [subMenu, setSubMenu] = useState(0);
   const drawerRef = useRef(null);
 
   const scrollThreshold = 150;
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const currentScrollPos = window.scrollY;
-
-  //     if (currentScrollPos >= scrollThreshold) {
-  //       setColorChange(true);
-  //     } else {
-  //       setColorChange(false);
-  //     }
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, []);
 
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
@@ -108,6 +92,11 @@ const Header = () => {
               <Link to={"/xəbərlər"} onClick={() => setOpen(false)}>
                 Xəbərlər
               </Link>
+
+              <Link to={"/promo-products"} onClick={() => setOpen(false)}>
+                Promo məhsullar
+              </Link>
+
               <Link to={"/üzvlük"} onClick={() => setOpen(false)}>
                 Üzvlük
               </Link>

@@ -9,6 +9,7 @@ import NewsPage from "../pages/news";
 import NewsDetailPage from "../pages/news/detail";
 import BlogPage from "../pages/blog";
 import ProjectDetail from "../pages/projects/detail";
+import PromoProducts from "../pages/promoProducts";
 
 const ROUTES = [
   {
@@ -54,6 +55,10 @@ const ROUTES = [
       {
         path: "xəbərlər/:id",
         element: <NewsDetailPage />,
+      },
+      {
+        path: "promo-products",
+        element: <PromoProducts />,
       },
     ],
   },
