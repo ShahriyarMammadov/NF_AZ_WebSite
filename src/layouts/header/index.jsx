@@ -180,6 +180,10 @@ const Header = () => {
                 )}
               </div>
 
+              <Link to={"/promo-products"} onClick={() => setOpen(false)}>
+                Promo məhsullar
+              </Link>
+
               <Link to={"/xəbərlər"} onClick={() => setOpen(false)}>
                 Xəbərlər
               </Link>

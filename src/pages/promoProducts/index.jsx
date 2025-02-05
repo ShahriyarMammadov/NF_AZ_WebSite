@@ -66,6 +66,7 @@ const PromoProducts = () => {
                 className="product-card"
                 key={product?._id}
                 to={`/promo-products/${product?._id}`}
+                state={{ promoProducts }}
               >
                 <img
                   src={`https://nfazcloudrailway.up.railway.app/uploads/${product?.cover_image}`}
