@@ -3,15 +3,20 @@ header {
     justify-content: space-between;
     z-index: 30;
     position: fixed;
+    top: 10px;
     width: 100%;
 
     .header {
-        width: 100%;
+        width: 95%;
         display: flex;
         justify-content: space-between;
-        padding: 8px 70px;
+        padding: 8px 30px;
         align-items: center;
         background-color: #fff;
+        max-width: 1200px;
+        margin: 0 auto;
+        border-radius: 40px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
         .left {
             img {
@@ -74,13 +79,12 @@ header {
                     }
                 }
             }
-
         }
     }
 
     .mobile {
         position: fixed;
-        top: 20px;
+        top: 12px;
         right: 4%;
         font-size: 30px;
         cursor: pointer;
