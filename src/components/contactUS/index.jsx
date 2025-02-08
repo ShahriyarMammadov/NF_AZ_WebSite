@@ -7,7 +7,7 @@ import {
   FaSquareXTwitter,
 } from "react-icons/fa6";
 import axios from "axios";
-import {  message } from "antd";
+import { message } from "antd";
 import { BASE_URL } from "../../constants";
 
 const ContactUS = () => {
@@ -53,12 +53,11 @@ const ContactUS = () => {
           "Müraciətiniz uğurla yaradıldı, ən qısa zamanda geri dönüş edəcik ❤",
       });
     } catch (error) {
-      console.log(error?.response);
       setLoading(false);
 
       messageApi.open({
         type: "error",
-        content: "Xəta baş verdi",
+        content: "Xəta baş verdi, biraz sonra yenidən cəhd edin.",
       });
     }
   };
@@ -120,10 +119,10 @@ const ContactUS = () => {
             <p className="colored">Bizə email göndər</p>
 
             <div className="email">
-              <a href="info@naturefriendsazerbaijan.org">
+              <a href="mailto:info@naturefriendsazerbaijan.org">
                 info@naturefriendsazerbaijan.org
               </a>
-              <a href="naturefriendsazerbaijan@gmail.com">
+              <a href="mailto:naturefriendsazerbaijan@gmail.com">
                 naturefriendsazerbaijan@gmail.com
               </a>
             </div>
@@ -133,7 +132,9 @@ const ContactUS = () => {
         <p className="colored">Zəng et və ya yaz</p>
         <div className="phone">
           <a href="tel:+994515984130">Phone: (+994) 51 598 4130</a>
-          <a href="tel:+994515984130">Whatsapp: (+994) 51 598 4130</a>
+          <a href="https://wa.me/994515984130" target="_blank">
+            Whatsapp: (+994) 51 598 4130
+          </a>
         </div>
 
         <div className="socialMediaIcons">
