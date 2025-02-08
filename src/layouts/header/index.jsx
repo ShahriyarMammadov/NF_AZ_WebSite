@@ -105,7 +105,7 @@ const Header = () => {
                 Blog
               </Link>
 
-              <Link to={"/üzvlük"} onClick={() => setOpen(false)}>
+              <Link to={"/contact"} onClick={() => setOpen(false)}>
                 Əlaqə
               </Link>
             </nav>
@@ -192,12 +192,9 @@ const Header = () => {
                 Blog
               </Link>
 
-              <Link to={"/üzvlük"} onClick={() => setOpen(false)}>
+              <Link to={"/contact"} onClick={() => setOpen(false)}>
                 Əlaqə
               </Link>
-              <a href="#" onClick={() => setOpen(false)}>
-                Donate
-              </a>
             </nav>
 
             <p>

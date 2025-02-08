@@ -11,6 +11,7 @@ import BlogPage from "../pages/blog";
 import ProjectDetail from "../pages/projects/detail";
 import PromoProducts from "../pages/promoProducts";
 import PromoProductsDetailPage from "../pages/promoProducts/detail";
+import ContactPage from "../pages/contact";
 
 const ROUTES = [
   {
@@ -64,6 +65,10 @@ const ROUTES = [
       {
         path: "promo-products/:id",
         element: <PromoProductsDetailPage />,
+      },
+      {
+        path: "contact",
+        element: <ContactPage />,
       },
     ],
   },

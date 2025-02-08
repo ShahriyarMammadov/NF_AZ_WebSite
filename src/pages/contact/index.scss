@@ -1,0 +1,13 @@
+#contactPage {
+    padding: 150px 0 150px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    background-image: linear-gradient(rgba(21, 21, 21, 0.6),
+            rgba(21, 21, 21, 0.2)),
+        url('../../assets/contactPage-bg.jpg');
+
+    @media only screen and (max-width: 1210px) {
+        padding: 110px 10px;
+    }
+}

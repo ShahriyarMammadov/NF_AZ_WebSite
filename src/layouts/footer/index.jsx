@@ -35,7 +35,7 @@ const Footer = () => {
           </div>
         </div> */}
       </div>
-      <p className="copyright">© Copyright Nature Friends Azerbaijan | 2024</p>
+      <p className="copyright">© Copyright Nature Friends Azerbaijan | 2025</p>
     </footer>
   );
 };

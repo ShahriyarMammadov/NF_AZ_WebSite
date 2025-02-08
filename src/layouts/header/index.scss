@@ -115,17 +115,17 @@ header {
 
     @media only screen and (max-width: 600px) {
         .header {
-            padding: 4px 40px;
+            padding: 4px 20px;
 
             .left {
                 img {
-                    width: 170px;
+                    width: 150px;
                 }
             }
         }
 
         .mobile {
-            top: 8px;
+            top: 3px;
         }
     }
 }

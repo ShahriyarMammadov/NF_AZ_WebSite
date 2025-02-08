@@ -5,7 +5,6 @@ import axios from "axios";
 import { BASE_URL } from "../../constants";
 import { Spin } from "antd";
 import { MdKeyboardArrowRight } from "react-icons/md";
-import { Link } from "react-router-dom";
 import SiteNavigation from "../../components/navigation";
 
 const BlogPage = () => {
