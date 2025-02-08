@@ -64,6 +64,7 @@
         width: 40%;
         background-color: #121212;
         padding: 50px;
+        overflow: hidden;
 
         p {
             font-size: 15px;
@@ -161,7 +162,7 @@
             form {
                 fieldset {
                     button {
-                        max-width: 100%;
+                        max-width: 300px;
                         padding: 10px 0;
                         font-size: 14px;
                     }
