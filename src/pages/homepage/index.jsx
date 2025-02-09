@@ -132,7 +132,7 @@ const HomePage = () => {
       </section>
 
       <section id="section2">
-        <div className="overlay"> </div>
+        <div className="overlay"></div>
 
         <div className="container">
           <div className="content">
@@ -145,16 +145,16 @@ const HomePage = () => {
                 fəaliyyətini davam edir. Təşkilat Qafqazda xüsusi ilə də
                 Azərbaycanda ətraf mühitin mühafizəsini təşviqi, sağlam həyat
                 tərzinin təbliği, açıq-havada təlim və tədrisin inkişafı məqsədi
-                ilə yerli və beynəlxalq layihələr icra edir. “Təbiət Dostları -
-                Azərbaycan”, “Beynəlxalq Gənclər Təbiət Dostları” (International
-                Young Nature Friends) təşkilatının tamhüquqlu üzvü olaraq, hər
-                il müxtəlif beynəlxalq proqramların iştirakçısı və təşkilatçısı
-                kimi fəaliyyət göstərir. 120 ildən çoxdur ki, Beynəlxalq Təbiət
-                Dostları qrupları dünyanın müxtəlif şəhərlərində mütəmadi olaraq
-                maarifləndirici layihələr və turistik gəzintilər həyata keçirir.
-                Azərbaycanda Təbiət Dostları Evlərinin başlanması biraz zaman
-                alsada dünyanın əksər bölgəsində minlərlə Təbiət Dostları Evləri
-                fəaliyyət göstərir.
+                ilə yerli və beynəlxalq layihələr icra edir. {<br />} “Təbiət
+                Dostları - Azərbaycan”, “Beynəlxalq Gənclər Təbiət Dostları”
+                (International Young Nature Friends) təşkilatının tamhüquqlu
+                üzvü olaraq, hər il müxtəlif beynəlxalq proqramların iştirakçısı
+                və təşkilatçısı kimi fəaliyyət göstərir. 120 ildən çoxdur ki,
+                Beynəlxalq Təbiət Dostları qrupları dünyanın müxtəlif
+                şəhərlərində mütəmadi olaraq maarifləndirici layihələr və
+                turistik gəzintilər həyata keçirir. Azərbaycanda Təbiət Dostları
+                Evlərinin başlanması biraz zaman alsada dünyanın əksər
+                bölgəsində minlərlə Təbiət Dostları Evləri fəaliyyət göstərir.
               </p>
 
               <button>
@@ -416,11 +416,9 @@ const HomePage = () => {
                         ></p>
                       </div>
 
-                     <h4>
-                       <MdKeyboardArrowRight className="icon" /> Daha ətraflı
-
-                     </h4>
-                  
+                      <h4>
+                        <MdKeyboardArrowRight className="icon" /> Daha ətraflı
+                      </h4>
                     </div>
                   </a>
                 );
