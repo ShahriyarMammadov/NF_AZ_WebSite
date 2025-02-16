@@ -47,27 +47,18 @@ const NewsDetailPage = () => {
           type="image/x-icon"
         /> */}
 
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content={data?.title} />
-        <meta
-          property="og:description"
-          content={data?.content?.substring(0, 150)}
-        />
-        <meta
-          property="og:image"
-          content={`https://nfazcloudrailway.up.railway.app/uploads/${data?.imageURL}`}
-        />
-        <meta property="og:url" content={window.location.href} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={data?.title} />
-        <meta
-          name="twitter:description"
-          content={data?.content?.substring(0, 150)}
-        />
-        <meta
-          name="twitter:image"
-          content={`https://nfazcloudrailway.up.railway.app/uploads/${data?.imageURL}`}
-        />
+<meta property="og:type" content="website" />
+  <meta property="og:title" content={data?.title} />
+  <meta property="og:description" content={data?.content?.substring(0, 150)} />
+  <meta property="og:image" content={`https://nfazcloudrailway.up.railway.app/uploads/${data?.imageURL}`} />
+  <meta property="og:url" content={window.location.href} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={data?.title} />
+  <meta name="twitter:description" content={data?.content?.substring(0, 150)} />
+  <meta name="twitter:image" content={`https://nfazcloudrailway.up.railway.app/uploads/${data?.imageURL}`} />
       </Helmet>
 
       <div className="container">
