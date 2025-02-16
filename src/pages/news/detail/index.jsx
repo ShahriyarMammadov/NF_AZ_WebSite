@@ -41,10 +41,32 @@ const NewsDetailPage = () => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>{data?.title}</title>
-        <link
+        {/* <link
           rel="shortcut icon"
-          href="../../assets/td logo 1.png"
+          href={`https://nfazcloudrailway.up.railway.app/uploads/${data?.imageURL}`}
           type="image/x-icon"
+        /> */}
+
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={data?.title} />
+        <meta
+          property="og:description"
+          content={data?.content?.substring(0, 150)}
+        />
+        <meta
+          property="og:image"
+          content={`https://nfazcloudrailway.up.railway.app/uploads/${data?.imageURL}`}
+        />
+        <meta property="og:url" content={window.location.href} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={data?.title} />
+        <meta
+          name="twitter:description"
+          content={data?.content?.substring(0, 150)}
+        />
+        <meta
+          name="twitter:image"
+          content={`https://nfazcloudrailway.up.railway.app/uploads/${data?.imageURL}`}
         />
       </Helmet>
 
