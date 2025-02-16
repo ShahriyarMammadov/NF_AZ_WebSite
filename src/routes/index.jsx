@@ -51,11 +51,11 @@ const ROUTES = [
         element: <SponsorMemberShipForm />,
       },
       {
-        path: "xəbərlər",
+        path: "news",
         element: <NewsPage />,
       },
       {
-        path: "xəbərlər/:id",
+        path: "news/:id",
         element: <NewsDetailPage />,
       },
       {

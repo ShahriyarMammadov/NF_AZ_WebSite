@@ -100,7 +100,7 @@ const LatestFourNews = () => {
       )}
 
       <div className="linkToNewsPage">
-        <Link to={"/xəbərlər"}>Daha çox</Link>
+        <Link to={"/news"}>Daha çox</Link>
       </div>
     </div>
   );

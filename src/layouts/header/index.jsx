@@ -89,7 +89,7 @@ const Header = () => {
                   </Link>
                 </div>
               </div>
-              <Link to={"/xəbərlər"} onClick={() => setOpen(false)}>
+              <Link to={"/news"} onClick={() => setOpen(false)}>
                 Xəbərlər
               </Link>
 
@@ -184,7 +184,7 @@ const Header = () => {
                 Promo məhsullar
               </Link>
 
-              <Link to={"/xəbərlər"} onClick={() => setOpen(false)}>
+              <Link to={"/news"} onClick={() => setOpen(false)}>
                 Xəbərlər
               </Link>
 

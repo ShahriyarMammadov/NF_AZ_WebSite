@@ -106,7 +106,7 @@ const NewsPage = () => {
                 plainText.slice(0, 100) + (plainText.length > 100 ? "..." : "");
 
               return (
-                <Link className="card" key={i} to={`/xəbərlər/${e?._id}`}>
+                <Link className="card" key={i} to={`/news/${e?._id}`}>
                   <div className="image">
                     <img
                       src={`https://nfazcloudrailway.up.railway.app/uploads/${e?.imageURL}`}
