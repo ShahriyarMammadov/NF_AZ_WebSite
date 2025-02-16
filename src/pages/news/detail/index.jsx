@@ -48,11 +48,6 @@ const NewsDetailPage = () => {
           content={`https://nfazcloudrailway.up.railway.app/uploads/${data?.imageURL}`}
         />
         <meta name="type" property="og:type" content="website" />
-        <meta
-          name="description"
-          property="og:description"
-          content={data?.content?.slice(0, 150)}
-        />
       </Helmet>
 
       <div className="container">
