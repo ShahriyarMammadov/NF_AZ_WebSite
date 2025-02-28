@@ -108,10 +108,7 @@ const NewsPage = () => {
               return (
                 <Link className="card" key={i} to={`/news/${e?._id}`}>
                   <div className="image">
-                    <img
-                      src={`https://nfazcloudrailway.up.railway.app/uploads/${e?.imageURL}`}
-                      alt="newsImage"
-                    />
+                    <img src={`${e?.imageURL}`} alt="newsImage" />
                   </div>
 
                   <div className="newsContent">

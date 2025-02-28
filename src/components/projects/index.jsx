@@ -61,7 +61,7 @@ const ProjectsComponent = ({ sliceCount }) => {
               >
                 <div className="image">
                   <img
-                    src={`https://nfazcloudrailway.up.railway.app/uploads/${e?.imageURL}`}
+                    src={`${e?.imageURL}`}
                     alt={e?.title}
                   />
                 </div>

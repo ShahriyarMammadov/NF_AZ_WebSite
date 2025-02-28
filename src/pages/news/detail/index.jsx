@@ -45,7 +45,7 @@ const NewsDetailPage = () => {
         <meta
           name="image"
           property="og:image"
-          content={`https://nfazcloudrailway.up.railway.app/uploads/${data?.imageURL}`}
+          content={`${data?.imageURL}`}
         />
         <meta name="type" property="og:type" content="website" />
       </Helmet>
@@ -78,7 +78,7 @@ const NewsDetailPage = () => {
             <p dangerouslySetInnerHTML={{ __html: data?.content }}></p>
 
             <Image
-              src={`https://nfazcloudrailway.up.railway.app/uploads/${data?.imageURL}`}
+              src={`${data?.imageURL}`}
               alt={data?.title}
               className="newsCoverImage"
             />

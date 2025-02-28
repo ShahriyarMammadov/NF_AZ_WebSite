@@ -84,14 +84,9 @@ const PromoProductsDetailPage = () => {
                   {data?.images?.map((image, index) => (
                     <div key={index}>
                       <Image.PreviewGroup
-                        items={data?.images?.map(
-                          (img) =>
-                            `https://nfazcloudrailway.up.railway.app/uploads/${img}`
-                        )}
+                        items={data?.images?.map((img) => `${img}`)}
                       >
-                        <Image
-                          src={`https://nfazcloudrailway.up.railway.app/uploads/${image}`}
-                        />
+                        <Image src={`${image}`} />
                       </Image.PreviewGroup>
                     </div>
                   ))}
@@ -138,7 +133,7 @@ const PromoProductsDetailPage = () => {
                   }}
                 >
                   <img
-                    src={`https://nfazcloudrailway.up.railway.app/uploads/${product?.cover_image}`}
+                    src={`${product?.cover_image}`}
                     alt={product?.name}
                     className="product-image"
                   />

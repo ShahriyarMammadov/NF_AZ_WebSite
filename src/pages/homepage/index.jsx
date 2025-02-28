@@ -393,12 +393,12 @@ const HomePage = () => {
                   <a
                     key={i}
                     className="card"
-                    href={`https://nfazcloudrailway.up.railway.app/uploads/${e?.fileURL}`}
+                    href={`${e?.fileURL}`}
                     target="_blank"
                   >
                     <div className="image">
                       <img
-                        src={`https://nfazcloudrailway.up.railway.app/uploads/${e?.imageURL}`}
+                        src={`${e?.imageURL}`}
                         alt={e?.title}
                       />
                     </div>

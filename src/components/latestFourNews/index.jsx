@@ -83,7 +83,7 @@ const LatestFourNews = () => {
               <Link className="card" key={i} to={`/xəbərlər/${e?._id}`}>
                 <div className="image">
                   <img
-                    src={`https://nfazcloudrailway.up.railway.app/uploads/${e?.imageURL}`}
+                    src={`${e?.imageURL}`}
                     alt="newsImage"
                   />
                 </div>

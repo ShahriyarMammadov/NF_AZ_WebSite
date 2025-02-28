@@ -75,7 +75,7 @@ const ProjectDetail = () => {
             <p dangerouslySetInnerHTML={{ __html: data?.content }}></p>
 
             <Image
-              src={`https://nfazcloudrailway.up.railway.app/uploads/${data?.imageURL}`}
+              src={`${data?.imageURL}`}
               alt={data?.title}
               className="blogCoverİmage"
             />

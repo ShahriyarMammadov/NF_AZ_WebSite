@@ -69,7 +69,7 @@ const PromoProducts = () => {
                 state={{ promoProducts }}
               >
                 <img
-                  src={`https://nfazcloudrailway.up.railway.app/uploads/${product?.cover_image}`}
+                  src={`${product?.cover_image}`}
                   alt={product?.name}
                   className="product-image"
                 />
