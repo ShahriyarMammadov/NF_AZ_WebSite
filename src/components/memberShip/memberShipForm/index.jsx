@@ -7,12 +7,14 @@ import {
   Form,
   Image,
   Input,
+  Progress,
   Radio,
   Result,
   Select,
   Spin,
   Upload,
 } from "antd";
+import { UploadFileToFirebase } from "../../../services/fileUploadToFirebase";
 import { PlusOutlined, MinusCircleOutlined } from "@ant-design/icons";
 import axios from "axios";
 import { BASE_URL } from "../../../constants";
@@ -41,8 +43,17 @@ const MemberShipForm = () => {
   const [backOfLicence, setBackOfLicence] = useState(null);
   const [emailSubscribtion, setEmailSubscribtion] = useState(null);
   const [memberType, setMemberType] = useState(null);
-  const [paymentReceipt, setPaymentReceipt] = useState(null);
+  const [paymentReceipt, setPaymentReceipt] = useState({
+    url: null,
+    type: null,
+  });
   const [studentCard, setStudentCard] = useState("");
+  const [uploadProgress, setUploadProgress] = useState({
+    backOfLicence: 0,
+    frontOfLicence: 0,
+    studentCard: 0,
+    paymentReceipt: 0,
+  });
 
   const [validationError, setValidationError] = useState(null);
 
@@ -89,19 +100,39 @@ const MemberShipForm = () => {
     },
   };
 
-  const handleFileChange = (info, type) => {
-    if (info.file.status === "done") {
-      const uploadedFileUrl = info.file.response.fileURL;
+  const handleFileChange = async (info, type) => {
+    const file = info.file.originFileObj || info.file;
+
+    if (!file) return;
+
+    try {
+      const uploadedFileUrl = await UploadFileToFirebase(
+        file,
+        "memberShip",
+        (progress) => {
+          setUploadProgress((prev) => ({ ...prev, [type]: progress }));
+        }
+      );
+
+      if (!uploadedFileUrl) {
+        console.error("❌");
+        return;
+      }
 
       if (type === "front") {
         setFrontOfLicence(uploadedFileUrl);
       } else if (type === "paymentReceipt") {
-        setPaymentReceipt(uploadedFileUrl);
+        setPaymentReceipt({
+          url: uploadedFileUrl,
+          type: file.type,
+        });
       } else if (type === "studentCard") {
         setStudentCard(uploadedFileUrl);
       } else {
         setBackOfLicence(uploadedFileUrl);
       }
+    } catch (error) {
+      console.error("Fayl yükləmə xətası:", error);
     }
   };
 
@@ -126,7 +157,7 @@ const MemberShipForm = () => {
         favoriteColor: favoriteColor,
         backOfLicence: backOfLicence,
         frontOfLicence: frontOfLicence,
-        paymentReceipt: paymentReceipt,
+        paymentReceipt: paymentReceipt?.url,
         emailSubscription: emailSubscribtion,
         studentCard: studentCard,
       };
@@ -625,7 +656,7 @@ const MemberShipForm = () => {
               <div className="uploadsInput">
                 {backOfLicence ? (
                   <Image
-                    src={`https://nfazcloudrailway.up.railway.app/uploads/${backOfLicence}`}
+                    src={`${backOfLicence}`}
                     alt={backOfLicence}
                     style={{ width: "150px" }}
                   />
@@ -633,9 +664,9 @@ const MemberShipForm = () => {
                   <div>
                     <Upload
                       maxCount={1}
-                      action={`https://nfazcloudrailway.up.railway.app/upload`}
                       listType="picture-card"
                       name="file"
+                      beforeUpload={() => false}
                       onChange={(info) => {
                         handleFileChange(info, "back");
                       }}
@@ -660,12 +691,20 @@ const MemberShipForm = () => {
                     {validationError?.index === 8 ? (
                       <p className="errorText">{validationError?.error}</p>
                     ) : null}
+
+                    {uploadProgress.backOfLicence > 0 &&
+                      uploadProgress.backOfLicence < 100 && (
+                        <Progress
+                          percent={uploadProgress.backOfLicence.toFixed(2)}
+                          status="active"
+                        />
+                      )}
                   </div>
                 )}
 
                 {frontOfLicence ? (
                   <Image
-                    src={`https://nfazcloudrailway.up.railway.app/uploads/${frontOfLicence}`}
+                    src={`${frontOfLicence}`}
                     alt={backOfLicence}
                     style={{ width: "150px" }}
                   />
@@ -673,7 +712,8 @@ const MemberShipForm = () => {
                   <div>
                     <Upload
                       maxCount={1}
-                      action={`https://nfazcloudrailway.up.railway.app/upload`}
+                      // action={`https://nfazcloudrailway.up.railway.app/upload`}
+                      beforeUpload={() => false}
                       listType="picture-card"
                       name="file"
                       onChange={(info) => {
@@ -700,6 +740,14 @@ const MemberShipForm = () => {
                     {validationError?.index === 9 ? (
                       <p className="errorText">{validationError?.error}</p>
                     ) : null}
+
+                    {uploadProgress.frontOfLicence > 0 &&
+                      uploadProgress.frontOfLicence < 100 && (
+                        <Progress
+                          percent={uploadProgress.frontOfLicence.toFixed(2)}
+                          status="active"
+                        />
+                      )}
                   </div>
                 )}
               </div>
@@ -711,7 +759,7 @@ const MemberShipForm = () => {
 
                 {studentCard ? (
                   <Image
-                    src={`https://nfazcloudrailway.up.railway.app/uploads/${studentCard}`}
+                    src={`${studentCard}`}
                     alt={studentCard}
                     style={{ width: "150px" }}
                   />
@@ -719,9 +767,9 @@ const MemberShipForm = () => {
                   <div>
                     <Upload
                       maxCount={1}
-                      action={`https://nfazcloudrailway.up.railway.app/upload`}
                       listType="picture-card"
                       name="file"
+                      beforeUpload={() => false}
                       onChange={(info) => {
                         handleFileChange(info, "studentCard");
                       }}
@@ -745,6 +793,14 @@ const MemberShipForm = () => {
                     </Upload>
                   </div>
                 )}
+
+                {uploadProgress.studentCard > 0 &&
+                  uploadProgress.studentCard < 100 && (
+                    <Progress
+                      percent={uploadProgress.studentCard.toFixed(2)}
+                      status="active"
+                    />
+                  )}
               </div>
             </Form.Item>
 
@@ -756,17 +812,32 @@ const MemberShipForm = () => {
                   sonra qəbzi yükləyin <span style={{ color: "red" }}>*</span>
                 </p>
 
-                {paymentReceipt ? (
-                  <Image
-                    src={`https://nfazcloudrailway.up.railway.app/uploads/${paymentReceipt}`}
-                    alt={paymentReceipt}
-                    style={{ width: "150px" }}
-                  />
+                {paymentReceipt?.url ? (
+                  paymentReceipt?.type?.startsWith("image/") ? (
+                    <Image
+                      src={paymentReceipt?.url}
+                      alt="Ödəniş qəbzi"
+                      style={{ width: "150px" }}
+                    />
+                  ) : (
+                    <a
+                      href={paymentReceipt?.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        display: "block",
+                        marginTop: "10px",
+                        color: "blue",
+                      }}
+                    >
+                      📄 Sənədi aç
+                    </a>
+                  )
                 ) : (
                   <div>
                     <Upload
                       maxCount={1}
-                      action={`https://nfazcloudrailway.up.railway.app/upload`}
+                      beforeUpload={() => false}
                       listType="picture-card"
                       name="file"
                       onChange={(info) => {
@@ -795,6 +866,14 @@ const MemberShipForm = () => {
                     ) : null}
                   </div>
                 )}
+
+                {uploadProgress.paymentReceipt > 0 &&
+                  uploadProgress.paymentReceipt < 100 && (
+                    <Progress
+                      percent={uploadProgress.paymentReceipt.toFixed(2)}
+                      status="active"
+                    />
+                  )}
               </div>
             </Form.Item>
 
