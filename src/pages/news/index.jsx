@@ -82,7 +82,7 @@ const NewsPage = () => {
           navigationData={{
             category: "Xəbərlər",
             navigate: "home",
-            nav: "xəbərlər",
+            nav: "news",
           }}
         />
 

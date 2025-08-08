@@ -21,7 +21,6 @@ const LatestFourNews = () => {
       setLatestNews(data?.slice(0, 4));
       setLoading(false);
     } catch (error) {
-      console.log(error);
       setLoading(false);
     }
   };
@@ -48,7 +47,6 @@ const LatestFourNews = () => {
       const year = date.getFullYear();
       return `${day - 1} ${months[month]} ${year}`;
     } catch (error) {
-      console.log(error);
       return dateString;
     }
   };
@@ -82,10 +80,7 @@ const LatestFourNews = () => {
             return (
               <Link className="card" key={i} to={`/news/${e?._id}`}>
                 <div className="image">
-                  <img
-                    src={`${e?.imageURL}`}
-                    alt="newsImage"
-                  />
+                  <img src={`${e?.imageURL}`} alt="newsImage" />
                 </div>
 
                 <div className="newsContent">

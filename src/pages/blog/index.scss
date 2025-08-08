@@ -1,12 +1,13 @@
 #blogPage {
     padding: 70px 0 150px 0;
+    margin-top: 20px;
 
     @media only screen and (max-width: 1210px) {
         padding: 70px 10px 150px 10px;
     }
 
     .projectsCards {
-        margin-top: 80px;
+        // margin-top: 80px;
         display: flex;
         gap: 20px;
         flex-wrap: wrap;
@@ -36,7 +37,7 @@
             }
 
             .content {
-                background-color: #007476;
+                background-color: #167834;
                 padding: 15px 20px 30px 20px;
                 color: white;
 
